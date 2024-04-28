@@ -1,7 +1,7 @@
-import MobileLayout from './Components/Mobile/Phone/Layout'
-import ScreenLayout from './Components/Screen/Layout'
+import DesktopLoading from './Components/Screen/Desktop/StartUp'
+import DesktopLayout from './Components/Screen/Layout'
 import useDetectScreenSize from './Hooks/useDetectScreenSize'
-import Intro from "../src/Components/Mobile/Intro";
+import PhoneLoading from "../src/Components/Mobile/Intro";
 import  "./index.css";
 
 function App() {
@@ -10,11 +10,10 @@ function App() {
 
   return (
     <>
-      <>
-        { width < 450 ? <Intro width={width} height={height} isloading={true} >
-          
-        </Intro> : <ScreenLayout />}
-      </>
+      <div className="h-[100vh] w-[100vw]">
+        { width < 450 ? <PhoneLoading width={width} height={height} isloading={true} />
+        : <DesktopLayout />}
+      </div>
     </>
   )
 }

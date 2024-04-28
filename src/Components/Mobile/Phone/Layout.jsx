@@ -25,7 +25,7 @@ const MobileLayout = () => {
     return days[day];
   }
 
-  console.log(getDay());
+  //console.log(getDay());
 
   const getDayNumber = () => {
     const date = new Date();
@@ -33,7 +33,7 @@ const MobileLayout = () => {
     return day;
   }
 
-  console.log(getDayNumber());
+  //console.log(getDayNumber());
 
   return (
     <>

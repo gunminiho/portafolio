@@ -7,6 +7,15 @@ import { useState } from "react";
 const Loading = ({width,height}) => {
 
     const [loading, setLoading] = useState(true);
+
+    const findWidthPosition = (width) => {
+        
+        return Math.ceil(((width-270)/2)-8); // 270 is the width of the phone screen and 8 is the border of the phone screen 
+    };
+
+    const findHeightPosition = (height) => {
+        return Math.ceil(((height-588)/2)-8); // 588 is the height of the phone screen and 8 is the border of the phone screen
+    };
     
     return (
         <>
@@ -17,13 +26,12 @@ const Loading = ({width,height}) => {
         <p className="text-white  text-center">Funcionalidades no disponibles aun!</p>
             </div>
         </div>
-        <div id="iphone12size" className={`w-[450px]`}>
-        <div id="phone">
-        <div id="phone-buttons" className="absolute top-32">
-        <div id="botonasilencio" className="relative top-28 left-20 bg-violet-300 border border-black h-7 w-2"></div>
-        <div id="botonmasvol" className="relative top-36 left-20 bg-violet-300 border border-black h-10 w-2"></div>
-        <div id="botonamenosvol" className="relative top-40 left-20 bg-violet-300 border border-black h-10 w-2"></div>
-        <div id="botonapagado" className="relative top-20 left-[360px] bg-violet-300 border border-black h-20 w-2"></div>
+        <div id="iphone12size" className={``}>
+        <div id="phone-buttons" className="absolute top-12">
+        <div id="botonasilencio" className={`relative top-28 left-[${findWidthPosition(width)}px] bg-violet-300 border border-black h-7 w-2`}></div>
+        <div id="botonmasvol" className={`relative top-36 left-[${findWidthPosition(width)}px] bg-violet-300 border border-black h-10 w-2`}></div>
+        <div id="botonamenosvol" className={`relative top-40 left-[${findWidthPosition(width)}px] bg-violet-300 border border-black h-10 w-2`}></div>
+        <div id="botonapagado" className={`relative top-20 left-[${findWidthPosition(width)+270+8}px] bg-violet-300 border border-black h-20 w-2`}></div>
         </div>
         <div id="phone-border" className="relative border-[20px] border-black h-[588px] w-[278px] rounded-[40px] mx-auto bg-gradient-to-b from-red-900 via-orange-400 via-purple-300 to-blue-500">
         <div id="phone-border-exterior" className="relative bottom-5 right-5 border-4 border-violet-300 rounded h-[588px] w-[278px] rounded-[40px] ">
@@ -40,9 +48,7 @@ const Loading = ({width,height}) => {
             </div>
         </div>   
         </div>
-            </div>
-       
-        
+            
         </div>
         </>
     );

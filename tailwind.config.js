@@ -6,6 +6,7 @@ export default {
     extend: {
       fontFamily: {
         tahoma: ['Tahoma', 'sans-serif'],
+        victormono: ['Victor Mono', 'monospace']
       },
     }, // Extensiones de la configuración de temas
   },
