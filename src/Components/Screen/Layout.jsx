@@ -4,6 +4,7 @@ import Word from "./View/Word";
 import Window from "./View/Window";
 import InternetExplorer from "./View/IE";
 import AllProjects from "./View/AllProjects";
+import CMD from "./View/CMD";
 import { useEffect, useState } from "react";
 import CV from "../../assets/cv.json"
 import StartUp from "./Desktop/StartUp";
@@ -24,6 +25,7 @@ const ScreenLayout = ({idiom}) => {
     useEffect(() => {
         if(idiom){
             setLanguage(idiom);
+            alert(startUp);
         }
     }
     ,[language]);
@@ -39,6 +41,7 @@ const ScreenLayout = ({idiom}) => {
        { showWindow && <Window showWindow={showWindow} setShowWindow={setShowWindow} />}
        {showIE && <InternetExplorer project={project} showIE={showIE} setShowIE={setShowIE} />}
        { allProjects && <AllProjects allProjects={allProjects} setAllProjects={setAllProjects} setProject={setProject} setShowIE={setShowIE} />}
+       { startUp && <CMD setStartUp={setStartUp} /> }
       </main>
       <footer>
         {/* Contenido del pie de página */}

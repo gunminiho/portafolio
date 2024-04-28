@@ -8,12 +8,12 @@ const StartUp = ({setLanguage}) => {
         <div className=" flex flex-col h-[25%] items-center justify-center">
           <p className="text-7xl text-center animate-pulse font-victormono pb-3">Erick Pajares</p>
           <p className="text-2xl text-center font-victormono">Full Stack Web Developer</p>
-          <label htmlFor="language" className="text-white">Select :{`  `}
+          <label htmlFor="language" className="text-white">Selecciona :{`  `}
           <select className="bg-black text-white border-2 border-white rounded-md p-1 mt-3" onChange={(e)=>setLanguage(e.target.value)}>
           <option selected disabled value="0"> Language / Idioma </option>
             <option value="en">English</option>
             <option value="es">Español</option>
-          </select> To see the content
+          </select> para continuar
           </label>
         </div>
         <div className="flex flex-col h-3/4 items-center">
