@@ -1,0 +1,26 @@
+[   
+    {
+        "title": "The Earthquake Report",
+        "description": "website that tracks lastest reports from USGS",
+        "type": "challenge",
+        "deploy": "https://quakeschallenge.vercel.app/"
+    },
+    {
+        "title": "Salesland Disociar",
+        "description": "Backend for managing leads store & disociate as challenge ",
+        "type": "challenge",
+        "deploy": "https://quakeschallenge.vercel.app/"
+    },
+    {
+        "title": "FlexWorks",
+        "description": "Final project: job board for remote jobs in Latam",
+        "type": "business",
+        "deploy": "https://www.flexworklatam.com/"
+    },
+    {
+        "title": "The Doggy Explorer",
+        "description": "First project for my web development class",
+        "type": "self",
+        "deploy": "https://quakeschallenge.vercel.app/"
+    }
+]

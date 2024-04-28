@@ -1,0 +1,49 @@
+{
+    "name": "Erick R. Pajares Balceda",
+    "contact_information": {
+      "address": "Lima, Perú",
+      "phone": "+51 998 994 999",
+      "email": "gunminiho@gmail.com"
+    },
+    "professional_summary": "Un desarrollador de software motivado y apasionado con sus primeros meses de experiencia \nen Node, React, Redux, PostgreSQL ,Svelte, Tailwind, Ruby(en aprendizaje) . Comprometido con el aprendizaje continuo y la resolución de problemas, con habilidades excepcionales en pensamiento crítico y resolución de problemas. Buscando una oportunidad emocionante para contribuir con mi experiencia y crecer profesionalmente en un entorno dinámico.",
+    "work_experience": [
+      {
+        "company": "Diamond Hotel Consulting SAC",
+        "location": "Lima, Peru",
+        "start_date": "Diciembre 2023",
+        "end_date": "Actualidad",
+        "responsibilities": [
+          "Colaboré en el desarrollo de features y mantenimiento de la plataforma de la empresa, trabajando con el equipo Senior para innovar y optimizar funcionalidades.",
+          "Utilicé tecnologías como Svelte, Tailwind y SQL para garantizar la escalabilidad del software y cumplir con las expectativas del cliente mediante una comunicación efectiva y habilidades de resolución de problemas."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Bootcamp: 'Desarrollo Full Stack Javascript'",
+        "school": "Soy Henry",
+        "date": "Junio - noviembre 2023"
+      },
+      {
+        "degree": "Bachiller en Ing. Zootecnia",
+        "university": "Universidad José Faustino Sánchez Carrión",
+        "graduation_year": 2015
+      }
+    ],
+    "skills": {
+      "programming_languages": ["JavaScript", "Ruby", "C/C++"],
+      "technologies": ["Node.js", "React.js", "Redux", "Express", "Sequelize", "PostgreSQL", "Ruby on Rails", "Tailwind", "Bootstrap"],
+      "others": ["Pensamiento crítico", "resiliencia", "deseo de aprender", "debugging", "ventas & manejo de equipos", "SCRUM", "Windows", "Mac", "Linux básico"]
+    },
+    "demos": {
+      "portfolio": "https://portfolio-erick-pajares-projects.vercel.app/",
+      "github": "https://github.com/gunminiho",
+      "linkedin": "https://www.linkedin.com/in/gunminiho/"
+    },
+    "languages": {
+      "spanish": "nativo",
+      "english": "B-2 / C-1"
+    },
+    "references": "Disponibles a solicitud."
+  }
+  
