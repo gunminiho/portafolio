@@ -24,7 +24,7 @@ const InternetExplorer = ({ project, showIE, setShowIE }) => {
         {/* Primera línea del encabezado */}
         <div className="flex h-[35px] w-full bg-blue-700 justify-between items-center shadow-md shadow-white">
         <img src={IE} alt="Internet Explorer" className="w-5 h-5 ml-2 mx-3" />
-        <p className="mx-2 text-white">Main Page - {project?.title} - Microsoft Internet Explorer</p>
+        <p className="mx-2 text-white">Main Page - {project?.title ? project?.title : alert("Seleccione un proyecto para verlo")} - Microsoft Internet Explorer</p>
         <div className="flex mr-1">
         < div className="mr-[2px] size-6 rounded border shadow-white shadow-sm border-white bg-blue-700 flex item-center" ><img src={Minimize} /></div>
             <div className="mr-[2px] size-6 rounded border shadow-white shadow-sm border-white bg-blue-700 flex items-center justify-center" ><img className="size-5" src={Maximize} /></div>

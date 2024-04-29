@@ -4,9 +4,12 @@ import Task1 from "../../../assets/task1.ico"
 import Task2 from "../../../assets/task2.ico"
 import Task3 from "../../../assets/task3.ico"
 import Task4 from "../../../assets/task4.ico"
+import IE from "../../../assets/ie.svg"
+import DocIcon from "../../../assets/word.svg";
+import Contact from "../../../assets/User1.ico";
 import { useEffect, useState } from "react";
 
-const Taskbar = ({ setStartMenu, startMenu, language, width }) => {
+const Taskbar = ({ setStartMenu, startMenu, language, width, showText, setShowText, showWindow, setShowWindow, showIE, setShowIE, currentView }) => {
 
     const [widthTaskbar, setWidthTaskbar] = useState("0");
 
@@ -25,7 +28,7 @@ const Taskbar = ({ setStartMenu, startMenu, language, width }) => {
     useEffect(() => {
         const widthTaskbar = getTaskbarWidth();
         setWidthTaskbar(widthTaskbar);
-        console.log(widthTaskbar);
+        //console.log(widthTaskbar);
     }, [width])
 
     return (
@@ -59,7 +62,18 @@ const Taskbar = ({ setStartMenu, startMenu, language, width }) => {
                     <div className="size-1 border "></div>
                     <div className="size-1 border "></div>
                     </div>
-                    
+                    <figure className="flex items-center shadow-inner shadow-[] p-2 hover:bg-blue-600 hover:cursor-pointer rounded mx-0.5" onClick={()=> setShowIE(!showIE)}>
+                        <img src={IE} className="h-6 w-6" />
+                        <figcaption className="ml-2 text-white"> Internet Explorer - Main Page </figcaption>
+                    </figure>
+                    <figure className="flex items-center shadow-inner shadow-[] p-2 hover:bg-blue-600 hover:cursor-pointer rounded mx-0.5" onClick={()=> currentView ? setShowText(!showText) : alert("Seleccione una opción del menu para ver la información") }>
+                        <img src={DocIcon} className="h-6 w-6" />
+                        <figcaption className="ml-2 text-white"> Microsoft Word - Erick Pajares </figcaption>
+                    </figure>
+                    <figure className="flex items-center shadow-inner shadow-[] p-2 hover:bg-blue-600 hover:cursor-pointer rounded mx-0.5" onClick={()=> setShowWindow(!showWindow)}>
+                        <img src={Contact} className="h-6 w-6" />
+                        <figcaption className="ml-2 text-white"> Send me a mail! - Contact Form </figcaption>
+                    </figure>
                 </div>
             </div>
     )

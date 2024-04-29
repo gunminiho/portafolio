@@ -15,7 +15,7 @@ import { useState, useEffect } from "react";
 const Word = ({ tittle, currentView,setCurrentView, showText, setShowText,language,setLanguage }) => {
 
   const [key,setKey] = useState(Object.keys(currentView));
-  //console.log(currentView[key]);
+  
   const [translation,setTranslation] = useState(Translation);
   useEffect(() => {
 
