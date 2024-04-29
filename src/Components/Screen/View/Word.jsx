@@ -10,6 +10,7 @@ import Download from "../../../assets/download.svg";
 import insertLineBreaks from "../../../Helpers/insertLineBreak";
 import convertObject from "../../../Helpers/convertObject";
 import Translation from "../../../assets/translation.json"
+import CV from "../../../assets/resume-es.pdf";
 import { useState, useEffect } from "react";
 
 const Word = ({ tittle, currentView,setCurrentView, showText, setShowText,language,setLanguage }) => {
@@ -17,6 +18,14 @@ const Word = ({ tittle, currentView,setCurrentView, showText, setShowText,langua
   const [key,setKey] = useState(Object.keys(currentView));
   
   const [translation,setTranslation] = useState(Translation);
+
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = CV;
+    link.download = 'resume.pdf';
+    link.click();
+  };
+
   useEffect(() => {
 
     return () => {
@@ -26,7 +35,7 @@ const Word = ({ tittle, currentView,setCurrentView, showText, setShowText,langua
 
   return (
     <>
-      <aside >
+      <aside className="fixed top-[9%] left-[10%] lg:top-[10%] lg:left-[22%] xl:top-[11%] xl:left-[26%]  " style={{ zIndex: 10 }} >
         <div id="header" className="w-1/2 min-w-[650px] mt-2 h-3/4 bg-gray-100 m-auto shadow-lg border">
           {/* primera fila de la ventana (logo + nombre documento) */}
           <div id="info" className=" mt-2 w-full text-black flex flex-row bg-gray-100 rounded-md justify-between items-center "> 
@@ -76,15 +85,15 @@ const Word = ({ tittle, currentView,setCurrentView, showText, setShowText,langua
           <option value="en">English</option>
           <option value="es">Español</option>
           </select>
-          <figure className="flex flex-row">
+          <figure className="flex flex-row" onClick={handleDownload}>
           <img src={Download} alt="Download" className="size-5 mx-1 my-auto cursor-pointer"/>
-          <figcaption className="text-xs my-auto cursor-pointer mr-2">download resume</figcaption>
+          <figcaption className="text-xs my-auto cursor-pointer mr-2">descarga CV</figcaption>
           </figure>
           </div>
         </div>
         {/* Aqui termina la barra de edicion */}
-        <div className="border w-1/2 min-w-[650px] mx-auto max-h-fit bg-white shadow-xl text-black">----------------------------------</div>
-        <div id="body" className="w-1/2 min-w-[650px] h-[600px] bg-white mx-auto shadow-xxl text-black border overflow-auto">
+        <div className="border w-1/2 min-w-[650px] mx-auto max-h-fit bg-white shadow-xl text-black"></div>
+        <div id="body" className="w-1/2 min-w-[650px] h-[500px] bg-white mx-auto shadow-xxl text-black border overflow-auto">
           {/* texto a mostrar */}
           <div className=" mx-5 my-4 border-2 border-gray-400 text-sm min-w-fit h-full">
           <pre className="mx-4 my-2 text-left text-xl font-bold">

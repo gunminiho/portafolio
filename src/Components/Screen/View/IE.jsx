@@ -18,7 +18,7 @@ const InternetExplorer = ({ project, showIE, setShowIE }) => {
     const [url, setUrl] = useState(project?.deploy);
    
   return (
-    <aside className="flex justify-center items-center w-[fit-content] h-screen mx-auto">
+    <aside className="relative flex justify-center items-center w-[fit-content] h-screen mx-auto">
       {/* Marco total */}
       <div className="border min-w-[680px] w-[fit-content] min-h-1/2 h-[650px] mx-auto bg-gray-800 border-4 border-blue-700 rounded-md shadow-md border">
         {/* Primera línea del encabezado */}

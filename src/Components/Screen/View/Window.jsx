@@ -3,7 +3,7 @@
 const Window = ({children , showWindow, setShowWindow}) => {
 
   return (
-    <aside className="flex items-center justify-center h-full">
+    <aside className="fixed left-[35%] lg:left-[35%] xl:left-[35%] flex items-center justify-center h-full" style={{ zIndex: 10 }}>
 
       <div className="border-2 bg-blue-800 flex flex-row">
         <form action="https://public.herotofu.com/v1/72bbd460-0231-11ef-a9e0-3721c124b74c" method="post" accept-charset="UTF-8" >

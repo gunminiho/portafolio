@@ -32,7 +32,7 @@ const Taskbar = ({ setStartMenu, startMenu, language, width, showText, setShowTe
     }, [width])
 
     return (
-        <div className="fixed flex bottom-0 left-0 h-[fit-content] bg-[#225BDA]">
+        <div className="fixed flex bottom-0 max-h-[45px] left-0 bg-[#225BDA]" >
             <div id="inicio" className="flex">
                 <StartButton setStartMenu={setStartMenu} startMenu={startMenu} />
                 <audio src={StartUpSound} autoPlay></audio>
@@ -46,7 +46,7 @@ const Taskbar = ({ setStartMenu, startMenu, language, width, showText, setShowTe
                     <p className=" ml-2 text-white ">{getCurrentTime()}</p>
                 </div>
                 <div id="programas" className={`ml-2 flex items-center`} style={{width:widthTaskbar}}>
-                    <div id="separador" className="h-auto grid grid-cols-2 gap-[1px] items-center mr-2">
+                    <div id="separador" className="max-h-[45px] grid grid-cols-2 gap-[1px] items-center mr-2" >
                     <div className="size-1 border "></div>
                     <div className="size-1 border "></div>
                     <div className="size-1 border "></div>
@@ -62,17 +62,17 @@ const Taskbar = ({ setStartMenu, startMenu, language, width, showText, setShowTe
                     <div className="size-1 border "></div>
                     <div className="size-1 border "></div>
                     </div>
-                    <figure className="flex items-center shadow-inner shadow-[] p-2 hover:bg-blue-600 hover:cursor-pointer rounded mx-0.5" onClick={()=> setShowIE(!showIE)}>
+                    <figure className="flex flex-row  items-center shadow-inner shadow-[] p-2 hover:bg-blue-600 hover:cursor-pointer rounded mx-0.5" onClick={()=> setShowIE(!showIE)}>
                         <img src={IE} className="h-6 w-6" />
-                        <figcaption className="ml-2 text-white"> Internet Explorer - Main Page </figcaption>
+                        <figcaption className="ml-2 text-white text-[10px] lg:text-[15px] xl:text-[20px] "> Internet Explorer </figcaption>
                     </figure>
                     <figure className="flex items-center shadow-inner shadow-[] p-2 hover:bg-blue-600 hover:cursor-pointer rounded mx-0.5" onClick={()=> currentView ? setShowText(!showText) : alert("Seleccione una opción del menu para ver la información") }>
                         <img src={DocIcon} className="h-6 w-6" />
-                        <figcaption className="ml-2 text-white"> Microsoft Word - Erick Pajares </figcaption>
+                        <figcaption className="ml-2 text-white text-[10px] lg:text-[15px] xl:text-[20px]"> Microsoft Word</figcaption>
                     </figure>
                     <figure className="flex items-center shadow-inner shadow-[] p-2 hover:bg-blue-600 hover:cursor-pointer rounded mx-0.5" onClick={()=> setShowWindow(!showWindow)}>
                         <img src={Contact} className="h-6 w-6" />
-                        <figcaption className="ml-2 text-white"> Send me a mail! - Contact Form </figcaption>
+                        <figcaption className="ml-2 text-white text-[10px] lg:text-[15px] xl:text-[20px]">Mail me!</figcaption>
                     </figure>
                 </div>
             </div>

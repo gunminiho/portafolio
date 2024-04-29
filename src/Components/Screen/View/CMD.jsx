@@ -13,8 +13,8 @@ const CMD = ({setStartUp, startUp}) => {
     }
 
     return (
-        <aside id="allscreen" className="border size-full flex items-center justify-center">
-            <div id="exterior" className="w-1/2 min-w-[420px] min-h-[450px] h-[60%]">
+        <aside id="allscreen" className=" size-full flex items-center justify-center">
+            <div id="exterior" className="absolute right-[120px] lg:right-[200px] xl:right-[300px] w-1/2 min-w-[420px] min-h-[450px] h-[60%]">
                 <div id="topbar" className="border-4 flex items-center justify-between pl-1 w-full h-[45px] bg-gradient-to-r from-blue-800 to-sky-300">
                     <div className="flex items-center">
                         <img className="size-8" src={cmd} alt="cmd" />
