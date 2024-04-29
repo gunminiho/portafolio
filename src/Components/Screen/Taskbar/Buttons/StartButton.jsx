@@ -11,7 +11,7 @@ const StartButton = ({setStartMenu,startMenu}) => {
         onClick={() => setStartMenu(!startMenu)}
       >
         <img className="h-[20px] " src={windowsxplogo} alt="windows xp logo" />
-        <p className="ml-4">Erick Pajares</p>
+        <p className="ml-4 font-bold">Erick Pajares</p>
       </button>
     </div>
   );

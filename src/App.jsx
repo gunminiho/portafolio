@@ -12,7 +12,7 @@ function App() {
     <>
       <div className="h-[100vh] w-[100vw]">
         { width < 450 ? <PhoneLoading width={width} height={height} isloading={true} />
-        : <DesktopLayout />}
+        : <DesktopLayout width={width} />}
       </div>
     </>
   )

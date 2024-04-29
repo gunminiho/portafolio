@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 import CV from "../../assets/cv.json"
 import StartUp from "./Desktop/StartUp";
 
-const ScreenLayout = ({idiom}) => {
+const ScreenLayout = ({idiom, width}) => {
 
     const [resume, setResume] = useState(CV); 
     const [currentView, setCurrentView] = useState();
@@ -45,7 +45,7 @@ const ScreenLayout = ({idiom}) => {
       </main>
       <footer>
         {/* Contenido del pie de página */}
-        { language !== "none" ? <Taskbar setStartMenu={setStartMenu} startMenu={startMenu} language={language} /> : ""}
+        { language !== "none" ? <Taskbar setStartMenu={setStartMenu} startMenu={startMenu} language={language} width={width} /> : ""}
       </footer>
     </div>
   );

@@ -26,7 +26,7 @@ const CMD = ({setStartUp, startUp}) => {
                     <img className="bg-gray-300 h-[25px] w-[20px] mx-0.5 border hover:bg-red-500" src={Close} onClick={closeCMD} />
                     </div>
                 </div>
-                <div id="content" className="bg-black w-full h-[91%] border-4 text-lg">
+                <div id="content" className="bg-black w-full h-[91%] border-4 text-lg overflow-y-auto">
                     <Typist avgTypingDelay={10} cursor={{ show: false }}>
                         <p className="p-2">Bienvenido a mi portafolio, mi nombre es Erick Pajares soy un desarrollador web full stack con inclinación más al backend y aquí encontraras una variedad de información desde mis hobbies hasta mi CV que podrás ver y descargar.</p>
                         <Typist.Delay ms={500} />
