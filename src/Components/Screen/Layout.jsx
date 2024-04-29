@@ -41,7 +41,7 @@ const ScreenLayout = ({idiom}) => {
        { showWindow && <Window showWindow={showWindow} setShowWindow={setShowWindow} />}
        {showIE && <InternetExplorer project={project} showIE={showIE} setShowIE={setShowIE} />}
        { allProjects && <AllProjects allProjects={allProjects} setAllProjects={setAllProjects} setProject={setProject} setShowIE={setShowIE} />}
-       { startUp && <CMD setStartUp={setStartUp} /> }
+       { language !== "none" && <CMD setStartUp={setStartUp} /> }
       </main>
       <footer>
         {/* Contenido del pie de página */}
