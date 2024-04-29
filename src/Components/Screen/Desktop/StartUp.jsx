@@ -9,8 +9,8 @@ const StartUp = ({setLanguage}) => {
           <p className="text-7xl text-center animate-pulse font-victormono pb-3">Erick Pajares</p>
           <p className="text-2xl text-center font-victormono">Full Stack Web Developer</p>
           <label htmlFor="language" className="text-white">Selecciona :{`  `}
-          <select className="bg-black text-white border-2 border-white rounded-md p-1 mt-3" onChange={(e)=>setLanguage(e.target.value)}>
-          <option selected disabled value="0"> Language / Idioma </option>
+          <select defaultValue="0" className="bg-black text-white border-2 border-white rounded-md p-1 mt-3" onChange={(e)=>setLanguage(e.target.value)}>
+          <option disabled value="0"> Language / Idioma </option>
             <option value="en">English</option>
             <option value="es">Español</option>
           </select> para continuar
