@@ -5,7 +5,13 @@ import Close from "../../../assets/close.svg";
 import Minimize from "../../../assets/minimize.svg";
 import Maximize from "../../../assets/maximize.svg";
 
-const CMD = ({setStartUp}) => {
+const CMD = ({setStartUp, startUp}) => {
+
+    const closeCMD = () => {
+        setStartUp(!startUp);
+        console.log(startUp);
+    }
+
     return (
         <aside id="allscreen" className="border size-full flex items-center justify-center">
             <div id="exterior" className="w-1/2 min-w-[420px] min-h-[450px] h-[60%]">
@@ -17,7 +23,7 @@ const CMD = ({setStartUp}) => {
                     <div id="buttons" className="flex pr-2">
                     <img className="bg-gray-300 h-[25px] w-[20px] mx-0.5 border " src={Minimize} />
                     <img className="bg-gray-300 h-[25px] w-[20px] mx-0.5 border" src={Maximize} />
-                    <img className="bg-gray-300 h-[25px] w-[20px] mx-0.5 border hover:bg-red-500" src={Close} onClick={()=>setStartUp(false)} />
+                    <img className="bg-gray-300 h-[25px] w-[20px] mx-0.5 border hover:bg-red-500" src={Close} onClick={closeCMD} />
                     </div>
                 </div>
                 <div id="content" className="bg-black w-full h-[91%] border-4 text-lg">
