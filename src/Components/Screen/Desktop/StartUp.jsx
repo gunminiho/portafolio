@@ -1,16 +1,28 @@
 import WindowsLogo from "../../../assets/windows xp logo.svg";
 import LoadingBar from "../../../assets/loadingbar.gif";
+import { setStartUp, setLanguage  } from "../../../redux/windowsBool";
+import { useSelector, useDispatch } from "react-redux";
 
-const StartUp = ({setLanguage}) => {
+const StartUp = () => {
+
+  const dispatch = useDispatch();
+  const { startUp } = useSelector((state) => state.windows);
+
+  const login = (e) => {
+    dispatch(setStartUp(!startUp));
+    dispatch(setLanguage(e.target.value))
+  }
+
+
   return (
     <>
-      <div className="bg-black w-full h-full">
+      <div className={`bg-black w-full h-full ${ startUp ? "hidden" : ""}`}>
         <div className=" flex flex-col h-[25%] items-center justify-center">
           <p className="text-7xl text-center animate-pulse font-victormono pb-3">Erick Pajares</p>
           <p className="text-2xl text-center font-victormono">Full Stack Web Developer</p>
           <label htmlFor="language" className="text-white">Selecciona :{`  `}
-          <select defaultValue="0" className="bg-black text-white border-2 border-white rounded-md p-1 mt-3" onChange={(e)=>setLanguage(e.target.value)}>
-          <option disabled value="0"> Language / Idioma </option>
+          <select defaultValue="none" className="bg-black text-white border-2 border-white rounded-md p-1 mt-3" onChange={login}>
+          <option disabled value="none"> Language / Idioma </option>
             <option value="en">English</option>
             <option value="es">Español</option>
           </select> para continuar

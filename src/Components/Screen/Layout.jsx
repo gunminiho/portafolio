@@ -9,44 +9,47 @@ import DesktopIcons from "./Desktop/DesktopIcons";
 import { useEffect, useState } from "react";
 import CV from "../../assets/cv.json"
 import StartUp from "./Desktop/StartUp";
+import { setLanguage, setStartMenu, setShowWindow,setShowText,setShowIE } from "../../redux/windowsBool";
+import { useSelector, useDispatch } from "react-redux";
 
 const ScreenLayout = ({idiom, width}) => {
 
     const [resume, setResume] = useState(CV); 
     const [currentView, setCurrentView] = useState();
-    const [startMenu, setStartMenu] = useState(false);
-    const [startUp, setStartUp] = useState(true);
-    const [showText, setShowText] = useState(false);
-    const [showWindow, setShowWindow] = useState(false);
-    const [showIE, setShowIE] = useState(false);
-    const [language,setLanguage] = useState("none");
-    const [allProjects, setAllProjects] = useState(false);
+    //const [startMenu, setStartMenu] = useState(false);
+    //const [startUp, setStartUp] = useState(false);
+    //const [showText, setShowText] = useState(false);
+    //const [showWindow, setShowWindow] = useState(false);
+    //const [showIE, setShowIE] = useState(false);
+    //const [language,setLanguage] = useState("none");
+    //const [allProjects, setAllProjects] = useState(false);
     const [project, setProject] = useState();
 
+    const dispatch = useDispatch();
+    const {language, startUp, startMenu, allProjects,showText, showWindow, showIE /* ,currentView, startMenu,showText, showWindow, showIE}*/ } = useSelector((state) => state.windows);
+  
     useEffect(() => {
         if(idiom){
-            setLanguage(idiom);
-            alert(startUp);
+            dispatch(setLanguage(idiom));
         }
     }
     ,[language]);
-
 
   return (
     <div>
       <header>{/* Contenido del encabezado  */}  </header>
       <main className={`bg-[url('https://wgoqatar.com/wp-content/uploads/2021/03/windows_xp_original-wallpaper-2880x1800-1-780x470.jpg')] absolute top-0 left-0 bottom-0 right-0 z-0 bg-cover bg-no-repeat bg-center`}  >
-      { language !== "none" ? <DesktopIcons /> : "" }
-       { language === "none" ? <StartUp setLanguage={setLanguage} /> : <Menu startMenu={startMenu} setStartMenu={setStartMenu} showWindow={showWindow} setShowWindow={setShowWindow} setCurrentView={setCurrentView} resume={resume} setShowText={setShowText} showText={showText} name={resume?.name} allProjects={allProjects} setAllprojects={setAllProjects} />}
-       { showText && currentView && <Word tittle={resume?.name} currentView={currentView} setCurrentView={setCurrentView} setShowText={setShowText} showText={showText} language={language} setLanguage={setLanguage}  />}
+      { language !== "none" &&  <DesktopIcons />}
+       { !startUp && language === "none" ? <StartUp /> : <Menu setCurrentView={setCurrentView} currentView={currentView} resume={resume} name={resume?.name} />}
+       { showText  && <Word tittle={resume?.name} currentView={currentView} setCurrentView={setCurrentView} />}
        { showWindow && <Window showWindow={showWindow} setShowWindow={setShowWindow} />}
        {showIE && <InternetExplorer project={project} showIE={showIE} setShowIE={setShowIE} />}
-       { allProjects && <AllProjects allProjects={allProjects} setAllProjects={setAllProjects} setProject={setProject} setShowIE={setShowIE} />}
-       { startUp && <CMD setStartUp={setStartUp} startUp={startUp} /> }
+       { allProjects && <AllProjects setProject={setProject} setShowIE={setShowIE} />}
+       { startUp && <CMD /> }
       </main>
       <footer>
         {/* Contenido del pie de página */}
-        { language !== "none" ? <Taskbar setStartMenu={setStartMenu} startMenu={startMenu} language={language} width={width} showText={showText} setShowText={setShowText} currentView={currentView} showWindow={showWindow} setShowWindow={setShowWindow} showIE={showIE} setShowIE={setShowIE} /> : ""}
+        { language !== "none" ? <Taskbar width={width} currentView={currentView} /> : ""}
       </footer>
       
     </div>

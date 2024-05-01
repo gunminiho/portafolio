@@ -8,8 +8,14 @@ import IE from "../../../assets/ie.svg"
 import DocIcon from "../../../assets/word.svg";
 import Contact from "../../../assets/User1.ico";
 import { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { setShowIE, setShowText, setShowWindow } from "../../../redux/windowsBool";
 
-const Taskbar = ({ setStartMenu, startMenu, language, width, showText, setShowText, showWindow, setShowWindow, showIE, setShowIE, currentView }) => {
+const Taskbar = ({width, currentView}) => {
+
+    const dispatch = useDispatch();
+
+    const {language, showText, showWindow, showIE} = useSelector((state) => state.windows);
 
     const [widthTaskbar, setWidthTaskbar] = useState("0");
 
@@ -28,15 +34,14 @@ const Taskbar = ({ setStartMenu, startMenu, language, width, showText, setShowTe
     useEffect(() => {
         const widthTaskbar = getTaskbarWidth();
         setWidthTaskbar(widthTaskbar);
-        //console.log(widthTaskbar);
     }, [width])
 
     return (
         <div className="fixed flex bottom-0 max-h-[45px] left-0 bg-[#225BDA]" >
             <div id="inicio" className="flex">
-                <StartButton setStartMenu={setStartMenu} startMenu={startMenu} />
+                <StartButton />
                 <audio src={StartUpSound} autoPlay></audio>
-                <span className="h-[42px] min-w-[fit-content] ml-2 pt-2">Language: {language !== "es" ? "english" : "español"}</span>
+                <span className="h-[42px] ml-2 pt-2"><p>Language:{language !== "es" ? "english" : "español"} </p> </span>
             </div>
                 <div id="tareasactivas" className="fixed flex flex-row right-0 bottom-0 h-[44px] pt-2 pr-2 min-w-[150px] justify-end bg-sky-400 ">
                     <img src={Task1} className="h-6 w-6 mx-1" />
@@ -62,17 +67,17 @@ const Taskbar = ({ setStartMenu, startMenu, language, width, showText, setShowTe
                     <div className="size-1 border "></div>
                     <div className="size-1 border "></div>
                     </div>
-                    <figure className="flex flex-row  items-center shadow-inner shadow-[] p-2 hover:bg-blue-600 hover:cursor-pointer rounded mx-0.5" onClick={()=> setShowIE(!showIE)}>
-                        <img src={IE} className="h-6 w-6" />
-                        <figcaption className="ml-2 text-white text-[10px] lg:text-[15px] xl:text-[20px] "> Internet Explorer </figcaption>
+                    <figure className="flex flex-row  items-center shadow-inner shadow-[] p-2 hover:bg-blue-600 hover:cursor-pointer rounded mx-0.5" onClick={()=> dispatch(setShowIE(!showIE))}>
+                        <img src={IE} className="min-h-6 min-w-6 h-6 w-6" />
+                        <figcaption className={`ml-2 text-white text-[9px] lg:text-[12px] xl:text-[15px] ${width < 700 ? "hidden" : ""} `} > Internet Explorer </figcaption>
                     </figure>
-                    <figure className="flex items-center shadow-inner shadow-[] p-2 hover:bg-blue-600 hover:cursor-pointer rounded mx-0.5" onClick={()=> currentView ? setShowText(!showText) : alert("Seleccione una opción del menu para ver la información") }>
-                        <img src={DocIcon} className="h-6 w-6" />
-                        <figcaption className="ml-2 text-white text-[10px] lg:text-[15px] xl:text-[20px]"> Microsoft Word</figcaption>
+                    <figure className="flex items-center shadow-inner shadow-[] p-2 hover:bg-blue-600 hover:cursor-pointer rounded mx-0.5" onClick={()=> typeof currentView === "object" ? dispatch(setShowText(!showText)) : alert("Seleccione una opción del menu para ver la información") }>
+                        <img src={DocIcon} className="min-h-6 min-w-6 h-6 w-6" />
+                        <figcaption className={`ml-2 text-white text-[9px] lg:text-[12px] xl:text-[15px] ${width < 700 ? "hidden" : ""}`}> Microsoft Word</figcaption>
                     </figure>
-                    <figure className="flex items-center shadow-inner shadow-[] p-2 hover:bg-blue-600 hover:cursor-pointer rounded mx-0.5" onClick={()=> setShowWindow(!showWindow)}>
-                        <img src={Contact} className="h-6 w-6" />
-                        <figcaption className="ml-2 text-white text-[10px] lg:text-[15px] xl:text-[20px]">Mail me!</figcaption>
+                    <figure className="flex items-center shadow-inner shadow-[] p-2 hover:bg-blue-600 hover:cursor-pointer rounded mx-0.5" onClick={()=> dispatch(setShowWindow(!showWindow))}>
+                        <img src={Contact} className="min-h-6 min-w-6 h-6 w-6" />
+                        <figcaption className={`ml-2 text-white text-[9px] lg:text-[12px] xl:text-[15px] ${width < 700 ? "hidden" : ""}`}>Mail me!</figcaption>
                     </figure>
                 </div>
             </div>

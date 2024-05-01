@@ -3,11 +3,20 @@ import  Business from "../../../assets/business.png";
 import  Education from "../../../assets/report.png";
 import Projects from "../../../assets/projects.json";
 import { useState } from 'react';
+import { useSelector, useDispatch } from "react-redux";
+import { setShowIE, setProject } from "../../../redux/windowsBool";
 
-const AllProjects = ({allProjects, setAllProjects, setProject, setShowIE}) => {
+const AllProjects = () => {
 
     const [img, setImg] = useState({Information, Business, Education});
     const [projects, setProjects] = useState(Projects);
+
+    const dispatch = useDispatch();
+    
+    const setMyProject = (project) => {
+        dispatch(setProject(project));
+        dispatch(setShowIE(true));
+    };
 
     return (
         <aside  className="w-[fit-content] fixed bottom-14 left-40">
@@ -17,7 +26,7 @@ const AllProjects = ({allProjects, setAllProjects, setProject, setShowIE}) => {
            
             return (
                 <div key={index} className="flex items-center border-b-2 my-1 hover:bg-blue-200 hover:cursor-pointer"
-                onClick={() => {setProject(project); setShowIE(true);}}
+                onClick={() => setMyProject(project)}
                 >
                 <img src={project.type === "self" ? Information : (project.type ==="challenge" ? Education : Business)} className="w-12 h-12" />
                 <div className="mx-1 w-full">

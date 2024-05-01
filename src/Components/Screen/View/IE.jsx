@@ -11,11 +11,24 @@ import Search from "../../../assets/iesearch.svg";
 import Favorites from "../../../assets/iefavorites.svg";
 import History from "../../../assets/iehistory.png";
 import OpenNew from "../../../assets/opennew.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { setShowIE } from "../../../redux/windowsBool";
 
-const InternetExplorer = ({ project, showIE, setShowIE }) => {
+const InternetExplorer = () => {
+
+    const dispatch = useDispatch();
+    const {showIE, project, language} = useSelector((state) => state.windows);
 
     const [url, setUrl] = useState(project?.deploy);
+
+    useEffect(() => {
+        setUrl(project?.deploy);
+    }, [project]);
+
+    const toggleIE = () => {
+        dispatch(setShowIE(!showIE));
+    }
    
   return (
     <aside className="relative flex justify-center items-center w-[fit-content] h-screen mx-auto">
@@ -24,11 +37,11 @@ const InternetExplorer = ({ project, showIE, setShowIE }) => {
         {/* Primera línea del encabezado */}
         <div className="flex h-[35px] w-full bg-blue-700 justify-between items-center shadow-md shadow-white">
         <img src={IE} alt="Internet Explorer" className="w-5 h-5 ml-2 mx-3" />
-        <p className="mx-2 text-white">Main Page - {project?.title ? project?.title : ""} - Microsoft Internet Explorer</p>
+        <p className="mx-2 text-white">Main Page - {project?.title ? project.title : "" } - Microsoft Internet Explorer</p>
         <div className="flex mr-1">
-        < div className="mr-[2px] size-6 rounded border shadow-white shadow-sm border-white bg-blue-700 flex item-center" ><img src={Minimize} /></div>
-            <div className="mr-[2px] size-6 rounded border shadow-white shadow-sm border-white bg-blue-700 flex items-center justify-center" ><img className="size-5" src={Maximize} /></div>
-            <div className="mr-[2px] size-6 rounded border shadow-white shadow-sm border-white bg-red-500 flex items-center justify-center hover:bg-red-700" onClick={()=>{setShowIE(!showIE)}} ><img className="size-4" src={Close} /></div>
+        < div className="mr-[2px] size-6 rounded border shadow-white shadow-sm border-white bg-blue-700 flex item-center" ><img src={Minimize} onClick={toggleIE} /></div>
+            <div className="mr-[2px] size-6 rounded border shadow-white shadow-sm border-white bg-blue-700 flex items-center justify-center" ><img className="size-5" src={Maximize} onClick={toggleIE} /></div>
+            <div className="mr-[2px] size-6 rounded border shadow-white shadow-sm border-white bg-red-500 flex items-center justify-center hover:bg-red-700" onClick={toggleIE} ><img className="size-4" src={Close} /></div>
         </div>
           </div>
            {/* Barra edicion */}
@@ -60,11 +73,14 @@ const InternetExplorer = ({ project, showIE, setShowIE }) => {
             <div className="flex flex-row justify-start bg-gray-200 items-center text-black text-sm">
                 <p className="mx-2 p-1 text-gray-400">Address</p>
                 <img src={IE} className="size-4 mx-2 " />
-                <input type="text" className="w-full h-5 mx-1 bg-white border border-gray-500 rounded p-3" disabled value={url} />
+                <input type="text" className="w-full h-5 mx-1 bg-white border border-gray-500 rounded p-3" value={url} />
                 <img src={Next} className="size-6 ml-2" /><p className="mx-2">Go</p>
             </div>
-            <div className="flex flex-1">
-                    <iframe className="w-full h-[510px] border-4" src={url} />
+            <div className="flex flex-1 justify-center bg-white">
+                    <iframe className={`w-full h-[510px] border-4 ${url ? "" : "hidden"}`} src={url ? url : ""} />
+                    <p className={`text-black font-bold ${url ? "hidden" : ""}`} >{
+                      language === "es" ? "No hay nada que mostrar, escriba una dirección y haga click en Go o seleccione un proyecto para cargar" : "There's nothing to show, write it down and click go or select a project to load"
+                    }</p>
             </div>
         </div>
         

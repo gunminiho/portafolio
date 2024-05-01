@@ -14,16 +14,20 @@ import LogOff from "../../../../assets/logoff.svg";
 import Photo from  "../../../../assets/selfie.png";
 import { Transition } from "@headlessui/react";
 import { useRef, useEffect } from 'react';
+import { setStartMenu, setAllProjects, setShowText, setShowWindow } from "../../../../redux/windowsBool";
+import { useSelector, useDispatch } from "react-redux";
 
-const Menu = ({startMenu,setStartMenu, name, showText, setShowText, resume, setCurrentView, showWindow, setShowWindow, allProjects, setAllprojects}) => {
+const Menu = ({name, resume, setCurrentView}) => {
 
   const menuRef = useRef(null);
+  const dispatch = useDispatch();
+  const { startMenu, allProjects, showText, showWindow } = useSelector((state) => state.windows);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
-        setStartMenu(false);
-        setAllprojects(false);
+        dispatch(setStartMenu(false));
+        dispatch(setAllProjects(false));
       }
     };
 
@@ -34,18 +38,18 @@ const Menu = ({startMenu,setStartMenu, name, showText, setShowText, resume, setC
   }, [menuRef, setStartMenu, startMenu]);
 
   const setViewInfo = async (view) => {
-    await setStartMenu(!startMenu);
-    await setShowText(!showText);
     await setCurrentView({[view]:resume[view]});
+    await dispatch(setStartMenu(!startMenu));
+    await dispatch(setShowText(!showText));
   };
 
   const setWindow = async () => {
-    await setStartMenu(!startMenu);
-    await setShowWindow(!showWindow);
+    await dispatch(setStartMenu(!startMenu));
+    await dispatch(setShowWindow(!showWindow));
   };
 
   const handleAllProjects = async () => {
-    await setAllprojects(!allProjects);
+    await dispatch(setAllProjects(!allProjects));
   }
 
 
@@ -64,7 +68,7 @@ const Menu = ({startMenu,setStartMenu, name, showText, setShowText, resume, setC
         <div
           ref={menuRef} className=" fixed bottom-11 border-2 border-blue-600 h-auto w-[25rem] rounded-t-lg transition-opacity transition-transform" >
         <div className="bg-gradient-to-br from-blue-800 to-blue-400 p-4 flex items-left font-bold">
-          <img src={Photo} className="size-14 border-2 border-white rounded-md mr-2" /><p className="content-center mr-auto">{name}</p><img src={LogOff} className="size-9 my-auto border-2 rounded-md bg-red-500 hover:bg-red-900" onClick={()=>setStartMenu(!startMenu)} />&nbsp;&nbsp;<p className="font-serif my-auto">Close</p>
+          <img src={Photo} className="size-14 border-2 border-white rounded-md mr-2" /><p className="text-tahoma content-center mr-auto">{name}</p><img src={LogOff} className=" size-9 my-auto border-2 rounded-md bg-red-500 hover:bg-red-900" onClick={()=>setStartMenu(!startMenu)} />&nbsp;&nbsp;<p className="text-tahoma my-auto">Close</p>
         </div>
         <div className="flex flex-row">
           {/* DIV DE LA PRIMERA MITAD DEL MENU*/}
