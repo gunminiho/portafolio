@@ -76,7 +76,7 @@ const InternetExplorer = () => {
                 <input type="text" className="w-full h-5 mx-1 bg-white border border-gray-500 rounded p-3" value={url} />
                 <img src={Next} className="size-6 ml-2" /><p className="mx-2">Go</p>
             </div>
-            <div className="flex flex-1 justify-center bg-white">
+            <div className="flex flex-1 justify-center">
                     <iframe className={`w-full h-[510px] border-4 ${url ? "" : "hidden"}`} src={url ? url : ""} />
                     <p className={`text-black font-bold ${url ? "hidden" : ""}`} >{
                       language === "es" ? "No hay nada que mostrar, escriba una dirección y haga click en Go o seleccione un proyecto para cargar" : "There's nothing to show, write it down and click go or select a project to load"
