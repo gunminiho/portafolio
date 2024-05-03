@@ -65,7 +65,7 @@ const toggleFontText = (e) => {
 
   return (
     <>
-      <aside ref={wordRef} className={`fixed top-[9%] left-[10%] lg:top-[10%] lg:left-[22%] xl:top-[11%] xl:left-[26%] ${!showText ? "hidden" : ""}`}  style={{ zIndex: 10 }} >
+      <aside ref={wordRef} className={`fixed top-[9%] left-[12%] lg:top-[10%] lg:left-[22%] xl:top-[11%] xl:left-[26%] ${!showText ? "hidden" : ""}`}  style={{ zIndex: 10 }} >
         <div id="header" className="w-1/2 min-w-[650px] mt-2 h-3/4 bg-gray-100 m-auto shadow-lg border">
           {/* primera fila de la ventana (logo + nombre documento) */}
           <div id="info" className=" mt-2 w-full text-black flex flex-row bg-gray-100 rounded-md justify-between items-center "> 

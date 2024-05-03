@@ -9,7 +9,7 @@ import DocIcon from "../../../assets/word.svg";
 import Contact from "../../../assets/User1.ico";
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { setShowIE, setShowText, setShowWindow } from "../../../redux/windowsBool";
+import { setShowIE, setShowText, setShowWindow, setLanguage } from "../../../redux/windowsBool";
 
 const Taskbar = ({width, currentView}) => {
 
@@ -34,6 +34,7 @@ const Taskbar = ({width, currentView}) => {
     useEffect(() => {
         const widthTaskbar = getTaskbarWidth();
         setWidthTaskbar(widthTaskbar);
+        
     }, [width])
 
     return (
@@ -41,7 +42,13 @@ const Taskbar = ({width, currentView}) => {
             <div id="inicio" className="flex">
                 <StartButton />
                 <audio src={StartUpSound} autoPlay></audio>
-                <span className="h-[42px] ml-2 pt-2"><p>Language:{language !== "es" ? "english" : "español"} </p> </span>
+                <div className="h-[42px] ml-1 flex items-center">
+                    <label htmlFor="language">{language==="es" ? "Idioma:" :"Language:"}</label>
+                    <select id="language" className=" ml-1 text-white bg-[#225BDA] border border-white rounded"  defaultValue={language} onChange={(e)=>dispatch(setLanguage(e.target.value))} >
+                        <option value="es">Español</option>
+                        <option value="en">English</option>
+                    </select>
+                </div>
             </div>
                 <div id="tareasactivas" className="fixed flex flex-row right-0 bottom-0 h-[44px] pt-2 pr-2 min-w-[150px] justify-end bg-sky-400 ">
                     <img src={Task1} className="h-6 w-6 mx-1" />
@@ -77,7 +84,7 @@ const Taskbar = ({width, currentView}) => {
                     </figure>
                     <figure className="flex items-center shadow-inner shadow-[] p-2 hover:bg-blue-600 hover:cursor-pointer rounded mx-0.5" onClick={()=> dispatch(setShowWindow(!showWindow))}>
                         <img src={Contact} className="min-h-6 min-w-6 h-6 w-6" />
-                        <figcaption className={`ml-2 text-white text-[9px] lg:text-[12px] xl:text-[15px] ${width < 700 ? "hidden" : ""}`}>Mail me!</figcaption>
+                        <figcaption className={`ml-2 text-white text-[9px] lg:text-[12px] xl:text-[15px] ${width < 700 ? "hidden" : ""}`}>{language === "es" ? "Contactame!" :"Mail me!"}</figcaption>
                     </figure>
                 </div>
             </div>
@@ -85,11 +92,4 @@ const Taskbar = ({width, currentView}) => {
 };
 
 export default Taskbar;
-
-/* 
-<div className=" ml-4 h-[42px] items-center">
-                    <div className=" h-10 w-full bg-black">
-                        A
-                    </div>
-*/
 

@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
 
     resume: null,
-    currentView: null,
+    showFolder: false,
     startMenu: false,
     startUp: false,
     showText: false,
@@ -11,7 +11,9 @@ const initialState = {
     showIE: false,
     language: "none",
     allProjects: false,
-    project: null
+    project: null,
+    url : null,
+    showResources: false,
 };
 
 const windowsBool = createSlice({
@@ -47,10 +49,19 @@ const windowsBool = createSlice({
         },
         setProject: (state, action) => {
             state.project = action.payload;
+        },
+        setShowFolder: (state, action) => {
+            state.showFolder = action.payload;
+        },
+        setUrl: (state, action) => {
+            state.url = action.payload;
+        },
+        setShowResources: (state, action) => {
+            state.showResources = action.payload;
         }
     }
 });
 
 
-export const { setResume, setCurrentView, setStartMenu, setStartUp, setShowText, setShowWindow, setShowIE, setLanguage, setAllProjects, setProject } = windowsBool.actions;
+export const { setResume, setCurrentView, setStartMenu, setStartUp, setShowText, setShowWindow, setShowIE, setLanguage, setAllProjects, setProject, setShowFolder,setUrl, setShowResources } = windowsBool.actions;
 export default windowsBool.reducer;
