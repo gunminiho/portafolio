@@ -11,6 +11,7 @@ import insertLineBreaks from "../../../Helpers/insertLineBreak";
 import convertObject from "../../../Helpers/convertObject";
 import Translation from "../../../assets/translation.json"
 import CV from "../../../assets/resume-es.pdf";
+import Resume from "../../../assets/resume-en.pdf";
 import { useState, useRef, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setLanguage, setShowText } from "../../../redux/windowsBool";
@@ -29,7 +30,7 @@ const Word = ({currentView}) => {
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = CV;
+    link.href = language ==="es" ? CV : Resume;
     link.download = 'resume.pdf';
     link.click();
   };
@@ -111,13 +112,13 @@ const toggleFontText = (e) => {
           <img src={List} className="size-5 mx-1 my-auto"/>
           <img src={Delist} className="size-5 mx-1 my-auto"/>
           <select className="mx-1 my-1 text-xs h-5 bg-white border border-gray-500 rounded" onChange={toggleLanguage} defaultValue={language}>
-          <option value="none" disabled selected>{`Select  / Selecciona`}</option>
+          <option value="none" disabled selected>{language ==="es"? "Selecciona": "Select"}</option>
           <option value="en">English</option>
           <option value="es">Español</option>
           </select>
           <figure className="flex flex-row" onClick={handleDownload}>
           <img src={Download} alt="Download" className="size-5 mx-1 my-auto cursor-pointer"/>
-          <figcaption className="text-xs my-auto cursor-pointer mr-2">descarga CV</figcaption>
+          <figcaption className="text-xs my-auto cursor-pointer mr-2">{language ==="es" ? "Descarga CV" : "Download Resume"}</figcaption>
           </figure>
           </div>
         </div>
