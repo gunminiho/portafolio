@@ -10,8 +10,8 @@ import Download from "../../../assets/download.svg";
 import insertLineBreaks from "../../../Helpers/insertLineBreak";
 import convertObject from "../../../Helpers/convertObject";
 import Translation from "../../../assets/translation.json"
-import CV from "../../../assets/resume-es.pdf";
-import Resume from "../../../assets/resume-en.pdf";
+import CV from "../../../assets/Files/resume-es.pdf";
+import Resume from "../../../assets/Files/resume-en.pdf";
 import { useState, useRef, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setLanguage, setShowText } from "../../../redux/windowsBool";
