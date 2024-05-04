@@ -14,8 +14,7 @@ import Network from "../../../assets/Files/network.jpg";
 import CV from "../../../assets/Files/resume-es.pdf";
 import Resume from "../../../assets/Files/resume-en.pdf";
 import { useSelector, useDispatch } from "react-redux";
-import { setUrl, setShowIE, setShowInfo,setFile } from "../../../redux/windowsBool";
-
+import { setUrl, setShowIE, setShowInfo, setFile } from "../../../redux/windowsBool";
 
 const DesktopIcons = ({ height }) => {
 
@@ -26,14 +25,14 @@ const DesktopIcons = ({ height }) => {
 
     const dispatch = useDispatch();
 
-    const setFileToView = (file,title,type) => {
+    const setFileToView = (file, title, type) => {
         dispatch(setFile({
-            title:title,
-             src: file,
-             type, 
-            }));
-        if(!showInfo)
-        dispatch(setShowInfo(!showInfo));
+            title: title,
+            src: file,
+            type,
+        }));
+        if (!showInfo)
+            dispatch(setShowInfo(!showInfo));
     }
 
     const launchGame = (game) => {
@@ -43,16 +42,16 @@ const DesktopIcons = ({ height }) => {
 
     return (
         <>
-            <div className={`fixed top-0 h-[94%] w-[fit-content] my-2 grid ${height < 780 ? (height < 580 ? "grid-cols-3 grid-rows-5" : "grid-cols-2 grid-rows-5") : "grid-cols-1 grid-rows-10"}  items-center justify-items-start`} >
-                <figure className="hover:bg-gray-100 hover:text-black hover:cursor-pointer w-[fit-content] mx-auto" onClick={()=> setFileToView(MySpec,language==="es"?"Mi PC":"My PC","img")}  >
+            <div className={`fixed top-0 h-[94%] w-[fit-content] my-2 ml-2 grid ${height < 780 ? (height < 580 ? "grid-cols-3 grid-rows-5" : "grid-cols-2 grid-rows-5") : "grid-cols-1 grid-rows-10"}  items-center justify-items-start`} >
+                <figure className="hover:bg-gray-100 hover:text-black hover:cursor-pointer w-[fit-content] mx-auto" onClick={() => setFileToView(MySpec, language === "es" ? "Mi PC" : "My PC", "img")}  >
                     <img src={MyPC} className="h-10 w-10 mx-auto" />
                     <figcaption>{language === "es" ? "Mi PC" : "My PC"}</figcaption>
                 </figure>
-                <figure className="hover:bg-gray-100 hover:text-black hover:cursor-pointer w-[fit-content] mx-auto" onClick={()=> setFileToView(language==="es"? CV : Resume ,language==="es"?"Mi CV":"My Resume","pdf")} >
+                <figure className="hover:bg-gray-100 hover:text-black hover:cursor-pointer w-[fit-content] mx-auto" onClick={() => setFileToView(language === "es" ? CV : Resume, language === "es" ? "Mi CV" : "My Resume", "pdf")} >
                     <img src={MyDocuments} className="h-10 w-10 mx-auto" />
                     <figcaption>{language === "es" ? "Mi CV" : "My Resume"}</figcaption>
                 </figure>
-                <figure className="hover:bg-gray-100 hover:text-black hover:cursor-pointer w-[fit-content] mx-auto" onClick={()=> setFileToView(Network,language==="es"?"Mi Red":"My Network","img")} >
+                <figure className="hover:bg-gray-100 hover:text-black hover:cursor-pointer w-[fit-content] mx-auto" onClick={() => setFileToView(Network, language === "es" ? "Mi Red" : "My Network", "img")} >
                     <img src={MyNetwork} className="h-10 w-10 mx-auto" />
                     <figcaption>{language === "es" ? "Mi red" : "My Network"}</figcaption>
                 </figure>
@@ -90,7 +89,7 @@ const DesktopIcons = ({ height }) => {
                         <figcaption className="">{language === "es" ? "Papelera de Reciclaje" : "Recycle Bin"}</figcaption>
                     </figure>
                 </div>
-            </div>
+                </div>
         </>
     );
 }

@@ -19,12 +19,9 @@ const InternetExplorer = () => {
 
     const dispatch = useDispatch();
     const {showIE, project, language, url} = useSelector((state) => state.windows);
-
-    //const [url, setUrl] = useState(project?.deploy);
     
     useEffect(() => {
-      //if(project?.deploy)
-        //dispatch(setUrl(project?.deploy));
+     
       return () => {
         dispatch(setUrl(null));
       }

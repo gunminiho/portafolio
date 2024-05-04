@@ -63,8 +63,8 @@ const Info = ({height}) => {
 
     return (
         <>
-            <aside className="border size-full relative flex items-center justify-center">
-                <div className="windowcontainer w-1/2 min-w-[600px] h-3/4 min-h-[550px] rounded-t-lg border border-gray-600 bg-gray-300">
+            <aside className="size-full relative flex items-center justify-center">
+                <div className="windowcontainer w-1/2 min-w-[600px] h-3/4 min-h-[550px] rounded-t-lg border-4 border-blue-700 bg-gray-300">
                     <div id="windowtitle" className="w-full h-[4%] bg-blue-700 rounded flex items-center justify-between " >
                         <div className="flex">
                         <img src={ImgPhoto} alt="ImgPhoto" className="size-6 ml-2" />
