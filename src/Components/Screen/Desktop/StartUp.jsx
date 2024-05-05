@@ -17,7 +17,7 @@ const StartUp = () => {
   return (
     <>
       <div className={`bg-black w-full h-full ${ startUp ? "hidden" : ""}`}>
-        <div className=" flex flex-col h-[25%] items-center justify-center mb-20">
+        <div className=" flex flex-col h-1/4 items-center justify-center mb-20">
           <p className="text-7xl text-center animate-pulse font-victormono pb-3 pt-16">Erick Pajares</p>
           <p className="text-2xl text-center font-victormono">Full Stack Web Developer</p>
           <label htmlFor="language" className="text-white">Selecciona :{`  `}
@@ -28,7 +28,7 @@ const StartUp = () => {
           </select> para continuar
           </label>
         </div>
-        <div className="flex flex-col h-3/4 items-center  min-h[330px]">
+        <div className="flex flex-col max-h-3/4 items-center  min-h[330px]">
           <div className="size-[fit-content]">
             <div className="flex items-end size-[fit-content] -red-600">
               <p className="text-[30px] mr-5 " >Microsoft <sup className="text-[16px] ">&#174;</sup> </p>

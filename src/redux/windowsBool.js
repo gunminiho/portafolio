@@ -16,6 +16,7 @@ const initialState = {
     showResources: false,
     showInfo: false,
     file: null,
+    tutorial: false,
 };
 
 const windowsBool = createSlice({
@@ -67,10 +68,14 @@ const windowsBool = createSlice({
         setFile: (state, action) => {
             state.file = action.payload;
         },
+        setTutorial : (state, action) => {
+            state.tutorial = action.payload;
+        },
+
 
     }
 });
 
 
-export const { setResume, setCurrentView, setStartMenu, setStartUp, setShowText, setShowWindow, setShowIE, setLanguage, setAllProjects, setProject, setShowFolder,setUrl, setShowResources, setShowInfo, setFile } = windowsBool.actions;
+export const { setResume, setCurrentView, setStartMenu, setStartUp, setShowText, setShowWindow, setShowIE, setLanguage, setAllProjects, setProject, setShowFolder,setUrl, setShowResources, setShowInfo, setFile, setTutorial } = windowsBool.actions;
 export default windowsBool.reducer;

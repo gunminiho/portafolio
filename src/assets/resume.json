@@ -1,0 +1,48 @@
+{
+    "name": "Erick R. Pajares Balceda",
+    "contact_information": {
+        "address": "Lima, Peru",
+        "phone": "+51 998 994 999",
+        "email": "gunminiho@gmail.com"
+    },
+    "professional_summary": "I am a motivated and passionate web developer with my first few months of experience in Node, React, Redux, PostgreSQL, Svelte, Tailwind, and Ruby (learning). Committed to continuous learning and problem-solving, with exceptional skills in critical thinking and problem-solving. Seeking an exciting opportunity to contribute my experience and grow professionally in a dynamic environment.",
+    "work_experience": [
+        {
+            "company": "Diamond Hotel Consulting SAC",
+            "location": "Lima, Peru",
+            "start_date": "December 2023",
+            "end_date": "Present",
+            "responsibilities": [
+                "Collaborated in the development of features and maintenance of the company's platform, working with the Senior team to innovate and optimize functionalities.",
+                "Used technologies like Svelte, Tailwind, and SQL to ensure software scalability and meet client expectations through effective communication and problem-solving skills."
+            ]
+        }
+    ],
+    "education": [
+        {
+            "degree": "Bootcamp: 'Full Stack Javascript Development'",
+            "school": "Soy Henry",
+            "date": "June - November 2023"
+        },
+        {
+            "degree": "Bachelor's in Animal Science Engineering",
+            "university": "Universidad José Faustino Sánchez Carrión",
+            "graduation_year": 2015
+        }
+    ],
+    "skills": {
+        "programming_languages": ["JavaScript", "Ruby", "C/C++"],
+        "technologies": ["Node.js", "React.js", "Redux", "Express", "Sequelize", "PostgreSQL", "Ruby on Rails", "Tailwind", "Bootstrap"],
+        "others": ["Critical thinking", "resilience", "desire to learn", "debugging", "sales & team management", "SCRUM", "Windows", "Mac", "Basic Linux"]
+    },
+    "demos": {
+        "portfolio": "https://portfolio-erick-pajares-projects.vercel.app/",
+        "github": "https://github.com/gunminiho",
+        "linkedin": "https://www.linkedin.com/in/gunminiho/"
+    },
+    "languages": {
+        "spanish": "native",
+        "english": "B-2 / C-1"
+    },
+    "references": "Available upon request."
+}

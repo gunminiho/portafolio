@@ -13,6 +13,7 @@ import MySpec from "../../../assets/Files/myspec.png";
 import Network from "../../../assets/Files/network.jpg";
 import CV from "../../../assets/Files/resume-es.pdf";
 import Resume from "../../../assets/Files/resume-en.pdf";
+import SteamImg from "../../../assets/Desktop Icons/steam.png";
 import { useSelector, useDispatch } from "react-redux";
 import { setUrl, setShowIE, setShowInfo, setFile } from "../../../redux/windowsBool";
 
@@ -22,6 +23,9 @@ const DesktopIcons = ({ height }) => {
     const pinball = "https://alula.github.io/SpaceCadetPinball/";
     const solitaire = "https://solitario-online.es/solitario/solitario-xp/";
     const buscaminas = "https://minesweeper.online/new-game";
+    const halflife ="https://playclassic.games/games/first-person-shooter-windows-games-online/half-life-uplink/play/";
+    const dota2 ="https://www.youtube.com/embed/86a3VMlUkSg";
+    const maplestory = `https://www.youtube.com/embed/${language === "es" ? "pqrsb0wuUe8" :"YnfRf2pVeqI" }`;
 
     const dispatch = useDispatch();
 
@@ -67,19 +71,19 @@ const DesktopIcons = ({ height }) => {
                     <img src={Buscaminas} className="h-10 w-10 mx-auto" />
                     <figcaption>{language === "es" ? "Buscaminas" : "Minesweeper"}</figcaption>
                 </figure>
-                <figure className="hover:bg-gray-100 hover:text-black hover:cursor-pointer w-[fit-content] mx-auto"  >
+                <figure className="hover:bg-gray-100 hover:text-black hover:cursor-pointer w-[fit-content] mx-auto" onClick={()=> launchGame(dota2)}  >
                     <img src={Dota2} className="h-10 w-10 mx-auto" />
                     <figcaption>Dota2</figcaption>
                 </figure>
-                <figure className="hover:bg-gray-100 hover:text-black hover:cursor-pointer w-[fit-content] mx-auto"  >
+                <figure className="hover:bg-gray-100 hover:text-black hover:cursor-pointer w-[fit-content] mx-auto" onClick={() => launchGame(halflife)} >
                     <img src={Halflife} className="h-10 w-10 mx-auto" />
                     <figcaption>Half Life</figcaption>
                 </figure>
-                <figure className="hover:bg-gray-100 hover:text-black hover:cursor-pointer w-[fit-content] mx-auto"  >
+                <figure className="hover:bg-gray-100 hover:text-black hover:cursor-pointer w-[fit-content] mx-auto" onClick={() => launchGame(maplestory)} >
                     <img src={Maplestory} className="h-10 w-10 mx-auto" />
                     <figcaption>Maplestory</figcaption>
                 </figure>
-                <figure className="hover:bg-gray-100 hover:text-black hover:cursor-pointer w-[fit-content] mx-auto"  >
+                <figure className="hover:bg-gray-100 hover:text-black hover:cursor-pointer w-[fit-content] mx-auto" onClick={() => setFileToView(SteamImg, language === "es" ? "Mi Biblioteca de Steam" : "My Steam Library", "img")} >
                     <img src={Steam} className="h-10 w-10 mx-auto" />
                     <figcaption>Steam</figcaption>
                 </figure>
