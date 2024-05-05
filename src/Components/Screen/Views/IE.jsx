@@ -48,7 +48,7 @@ const InternetExplorer = () => {
           </div>
         </div>
         {/* Barra edicion */}
-        <div className="flex flex-row justify-start bg-gray-200 items-center text-black text-sm">
+        <div className="flex flex-row justify-start bg-gray-200 items-center text-black text-sm h-[28px]">
           <p className="p-1 mx-1 hover:border-b-2 hover: border-blue-700">{language === "en" ? "File" : "Archivo"}</p>
           <p className="p-1 mx-1 hover:border-b-2 hover: border-blue-700">{language === "en" ? "Edit" : "Editar"}</p>
           <p className="p-1 mx-1 hover:border-b-2 hover: border-blue-700">{language === "en" ? "View" : "Ver"}</p>
