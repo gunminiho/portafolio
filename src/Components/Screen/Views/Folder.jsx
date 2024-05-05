@@ -54,7 +54,7 @@ const Folder = ({width, height}) => {
     return (
         <>
         <aside id="background" className="size-full flex items-center justify-center relative">
-            <div id="header" className=" border-4 border-blue-700 max-w-[50%] w-1/2 h-[60%] rounded">
+            <div id="header" className=" border-4 border-blue-700 w-[70%] min-w-[650px] h-[60%] rounded">
             <div id="tittle" className="flex items-center justify-start bg-blue-700 h-[35px] rounded font-bold"><img src={FolderIcon} className="mx-2 size-5" />
             C:\Users\Erick\Projects
             <div id="buttons" className="w-full h-[27px] mb-1 flex items-center justify-end" >
@@ -75,17 +75,17 @@ const Folder = ({width, height}) => {
           {/* Barra de navegacion */}      
           <div className="flex flex-row justify-start bg-gray-200 items-center text-black text-sm min-w-[fit-content]">
                 <div className="flex border-2 border-gray-300 items-center min-w-[fit-content]">
-                <img src={Back} className="size-9 mx-2 " /><p className={`mx-1 ${width < 768 ? "hidden" : "" }`}>{language ==="en" ? "Back" :"Atras"}</p>
-                <img src={Next} className="size-8 mx-2 " /><p className={`mr-2 ml-1 ${width < 768 ? "hidden" : "" }`}>{language ==="en" ? "Next" :"Siguiente"}</p>
+                <img src={Back} className="size-9 mx-2 " /><p className={`mx-1 ${width < 1000 ? "hidden" : "" }`}>{language ==="en" ? "Back" :"Atras"}</p>
+                <img src={Next} className="size-8 mx-2 " /><p className={`mr-2 ml-1 ${width < 1000 ? "hidden" : "" }`}>{language ==="en" ? "Next" :"Siguiente"}</p>
                 <img src={Page} className={`size-8 bg-blue-100 mx-2`} />
                 <img src={Refresh} className={`size-8 mx-2`}  />
                 <img src={Home} className={`size-8 mx-2 `} />
                 </div>
-                <div className={`flex border-2 border-gray-300 items-center min-w-[fit-content] w-[61%] `}>
-                <img src={Search} className={`size-9 mx-2 `} /><p className={`${width < 768 ? "hidden" : "" }`}>{language ==="en" ? "Search" :"Buscar"}</p>
-                <img src={Favorites} className={`size-8 mx-2`} /><p className={`${width < 768 ? "hidden" : "" }`}>{language ==="en" ? "Favorites" :"Favoritos"}</p>
-                <img src={History} className={`size-8 mx-2 `} /><p className={`${width < 768 ? "hidden" : "" }`}>{language ==="en" ? "History" :"Historial"}</p>
-                <a target="_blank" href={url} className="flex text-black hover:bg-blue-200 ml-3 items-center"><img src={OpenNew} className="size-7" /><p className={`${width < 768 ? "hidden" : "" }`}>{language ==="en" ? "Open in browser" :"Abrir en tu navegador"}</p></a>
+                <div className={`flex border-2 border-gray-300 items-center min-w-[fit-content] w-[72%] `}>
+                <img src={Search} className={`size-9 mx-2 `} /><p className={`${width < 1130 ? "hidden" : "" }`}>{language ==="en" ? "Search" :"Buscar"}</p>
+                <img src={Favorites} className={`size-8 mx-2`} /><p className={`${width < 1130 ? "hidden" : "" }`}>{language ==="en" ? "Favorites" :"Favoritos"}</p>
+                <img src={History} className={`size-8 mx-2 `} /><p className={`${width < 1330 ? "hidden" : "" }`}>{language ==="en" ? "History" :"Historial"}</p>
+                <a target="_blank" href={url} className="flex text-black hover:bg-blue-200 ml-3 items-center"><img src={OpenNew} className="size-7" /><p className={`${width < 500 ? "hidden" : "" }`}>{language ==="en" ? "Open in browser" :"Abrir en tu navegador"}</p></a>
                 </div>
             </div>
             {/* Contenido de la ventana */}
@@ -100,7 +100,7 @@ const Folder = ({width, height}) => {
                 </dl>
                
                 {/* Destalle del proyecto */}
-                <div id="barraderecha"  className="border w-3/4 h-[max-content] p-2">
+                <div id="barraderecha"  className="border w-3/4 h-[max-content] min-h-full p-2">
                 <p className="text-center text-[25px]">{viewProject?.title}</p>
                 <p className="font-bold">{viewProject ? (language === "es" ? "Resumen: " : "Summary: ") : ""}{viewProject?.description}</p>
                 <p className="font-bold">{viewProject ? (language === "es" ? "Descripción: " : "Description: ") : ""}

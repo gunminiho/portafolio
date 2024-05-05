@@ -70,7 +70,7 @@ const Menu = ({name, resume, setCurrentView}) => {
         <div
           ref={menuRef} className=" fixed bottom-11 border-2 border-blue-600 h-auto w-[25rem] rounded-t-lg transition-opacity transition-transform" >
         <div className="bg-gradient-to-br from-blue-800 to-blue-400 p-4 flex items-left font-bold">
-          <img src={Photo} className="size-14 border-2 border-white rounded-md mr-2" /><p className="text-tahoma content-center mr-auto">{name}</p><img src={LogOff} className=" size-9 my-auto border-2 rounded-md bg-red-500 hover:bg-red-900" onClick={()=>setStartMenu(!startMenu)} />&nbsp;&nbsp;<p className="text-tahoma my-auto">{language==="es" ? "Cerrar" : "Close"}</p>
+          <img src={Photo} className="size-14 border-2 border-white rounded-md mr-2" /><p className="text-tahoma content-center mr-auto">{name}</p><img src={LogOff} className=" size-9 my-auto border-2 rounded-md bg-red-500 hover:bg-red-900" onClick={()=>dispatch(setStartMenu(!startMenu))} />&nbsp;&nbsp;<p className="text-tahoma my-auto">{language==="es" ? "Cerrar" : "Close"}</p>
         </div>
         <div className="flex flex-row">
           {/* DIV DE LA PRIMERA MITAD DEL MENU*/}

@@ -25,7 +25,7 @@ const Window = () => {
             <div className="mr-[2px] size-6 rounded border shadow-white shadow-sm border-white bg-red-500 flex items-center justify-center hover:bg-red-700" onClick={toggleWindow} ><img className="size-4" src={Close} /></div>
             </div>
           </div>
-          <div className="h-[350px] w-[400px] bg-gray-300">
+          <div className="h-[350px] w-[400px] bg-gray-300 text-black">
             <div className="flex flex-col items-center justify-center h-full">
               <input type="text" name="name" className="w-3/4 p-1 m-1 border-2 rounded-lg mt-4 bg-white" placeholder="Name" required  />
               <input type="email" name="email" className="w-3/4 p-1 m-1 border-2 rounded-lg bg-white" placeholder="Email" required />
