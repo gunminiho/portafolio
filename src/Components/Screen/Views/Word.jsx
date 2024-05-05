@@ -97,7 +97,7 @@ const Word = ({ currentView }) => {
     return (
       <ul className="list-disc">
         <li className="text-xl ml-3 mb-2">{translation[language][key]}</li>
-        <li className="ml-6 list-none mb-4">{currentView[key]}</li>
+        <li className="ml-6 list-none mb-4 ">{currentView[key]}</li>
         <hr className="my-2 border-gray-500" />
       </ul>
      
