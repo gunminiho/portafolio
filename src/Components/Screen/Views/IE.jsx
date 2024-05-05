@@ -80,8 +80,9 @@ const InternetExplorer = () => {
           <img src={Next} className="size-6 ml-2" /><p className="mx-2">{language === "en" ? "Go" : "Ir"}</p>
         </div>
         <div className="flex flex-1 items-center justify-center">
-          {!url?.includes("github") && <iframe className={`w-full h-[510px] border-4 ${url ? "" : "hidden"}`} src={url ?? "https://portfolio-erick-pajares-projects.vercel.app/"} />}
-          {url?.includes("github") &&
+          {(!url?.includes("github") )&& <iframe className={`w-full h-[510px] border-4 ${url ? "" : "hidden"}`} src={url ?? "https://portfolio-erick-pajares-projects.vercel.app/"} />}
+          {url?.includes("Pinball") && <iframe className={`w-full h-[510px] border-4 ${url ? "" : "hidden"}`} src={url ?? "https://portfolio-erick-pajares-projects.vercel.app/"} />}
+          {url?.includes("github") && !url?.includes("Pinball") &&
             <div className="mt-10">
               <p> {language === "es"
                 ? "Esta es una página de GitHub. No se puede ver aquí. Haz clic en el botón de abajo para redirigir a GitHub."
