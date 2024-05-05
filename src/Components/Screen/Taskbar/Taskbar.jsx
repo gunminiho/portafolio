@@ -11,13 +11,7 @@ import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { setShowIE, setShowText, setShowWindow, setLanguage } from "../../../redux/windowsBool";
 
-const Taskbar = ({width, currentView}) => {
-
-    const dispatch = useDispatch();
-
-    const {language, showText, showWindow, showIE} = useSelector((state) => state.windows);
-
-    const [widthTaskbar, setWidthTaskbar] = useState("0");
+const Taskbar = ({width}) => {
 
     const getCurrentTime = () => {
         const date = new Date();
@@ -25,6 +19,12 @@ const Taskbar = ({width, currentView}) => {
         const minutes = date.getMinutes().toString().padStart(2, '0');
         return `${hours}:${minutes}`;
     }
+
+    const dispatch = useDispatch();
+    const {language, showText, showWindow, showIE} = useSelector((state) => state.windows);
+
+    const [widthTaskbar, setWidthTaskbar] = useState("0");
+    const [currentTime, setCurrentTime] = useState(getCurrentTime());
 
     const getTaskbarWidth = () => {
         if(width)
@@ -34,6 +34,10 @@ const Taskbar = ({width, currentView}) => {
     useEffect(() => {
         const widthTaskbar = getTaskbarWidth();
         setWidthTaskbar(widthTaskbar);
+        const interval = setInterval(() => {
+            setCurrentTime(getCurrentTime());
+        }, 30000);
+        return () => clearInterval(interval);
         
     }, [width])
 
@@ -55,7 +59,7 @@ const Taskbar = ({width, currentView}) => {
                     <img src={Task2} className="h-6 w-6 mx-1" />
                     <img src={Task3} className="h-6 w-6 mx-1" />
                     <img src={Task4} className="h-6 w-6 mx-1" />
-                    <p className=" ml-2 text-white ">{getCurrentTime()}</p>
+                    <p className="flex ml-2 text-white">{currentTime.split(":")[0]} <p className="animate-pulse" >:</p>{currentTime.split(":")[1]}</p>
                 </div>
                 <div id="programas" className={`ml-2 flex items-center`} style={{width:widthTaskbar}}>
                     <div id="separador" className="max-h-[45px] grid grid-cols-2 gap-[1px] items-center mr-2" >
@@ -78,7 +82,7 @@ const Taskbar = ({width, currentView}) => {
                         <img src={IE} className="min-h-6 min-w-6 h-6 w-6" />
                         <figcaption className={`ml-2 text-white text-[9px] lg:text-[12px] xl:text-[15px] ${width < 700 ? "hidden" : ""} `} > Internet Explorer </figcaption>
                     </figure>
-                    <figure className="flex items-center shadow-inner shadow-[] p-2 hover:bg-blue-600 hover:cursor-pointer rounded mx-0.5" onClick={()=> typeof currentView === "object" ? dispatch(setShowText(!showText)) : alert("Seleccione una opción del menu para ver la información") }>
+                    <figure className="flex items-center shadow-inner shadow-[] p-2 hover:bg-blue-600 hover:cursor-pointer rounded mx-0.5" onClick={()=> dispatch(setShowText(!showText))}>
                         <img src={DocIcon} className="min-h-6 min-w-6 h-6 w-6" />
                         <figcaption className={`ml-2 text-white text-[9px] lg:text-[12px] xl:text-[15px] ${width < 700 ? "hidden" : ""}`}> Microsoft Word</figcaption>
                     </figure>

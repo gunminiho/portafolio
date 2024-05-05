@@ -16,11 +16,22 @@
               "Colaboré en el desarrollo de features y mantenimiento de la plataforma de la empresa, trabajando con el equipo Senior para innovar y optimizar funcionalidades.",
               "Utilicé tecnologías como Svelte, Tailwind y SQL para garantizar la escalabilidad del software y cumplir con las expectativas del cliente mediante una comunicación efectiva y habilidades de resolución de problemas."
           ]
-      }
+      },
+      {
+        "company": "Royal Prestige Perú",
+        "location": "Lima, Perú",
+        "start_date": "Diciembre 2017",
+        "end_date": "Mayo 2023",
+        "responsibilities": [
+            "Realizar la venta directa de los productos de alta gama de cocina de la marca.",
+            "Capacitar de vendedores nuevos en oficinas asi como evaluando su desempeño reportado en campo.",
+            "Entrenar vendedores en campo, acompañándolos a las demostraciones realizadas con los clientes."
+        ]
+    }
   ],
   "education": [
       {
-          "degree": "Bootcamp: 'Desarrollo Full Stack Javascript'",
+          "degree": "Bootcamp -'Desarrollo Full Stack Javascript'",
           "school": "Soy Henry",
           "date": "Junio - noviembre 2023"
       },
@@ -36,7 +47,7 @@
       "others": ["Pensamiento crítico", "resiliencia", "deseo de aprender", "debugging", "ventas & manejo de equipos", "SCRUM", "Windows", "Mac", "Linux básico"]
   },
   "demos": {
-      "portfolio": "https://portfolio-erick-pajares-projects.vercel.app/",
+      "portfolio": "https://erickpajares.dev/",
       "github": "https://github.com/gunminiho",
       "linkedin": "https://www.linkedin.com/in/gunminiho/"
   },
