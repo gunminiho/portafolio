@@ -15,7 +15,13 @@ const Tutorial = () => {
     const [message5, setMessage5] = useState(false);
 
     const dispatch = useDispatch();
-    const { tutorial } = useSelector((state) => state.windows);
+    const { tutorial, language } = useSelector((state) => state.windows);
+
+    const message1Text = language === "es" ? "En esta sección puedes encontrar mi CV, las características de mi PC y Mi conexión a internet" : "In this section you can find my Resume, my PC's spec and My internet connection";
+    const message2Text = language === "es" ? "Si estas con algo de nostalgia puedes recordar los clásicos juegos de WinXP y otros mas!" : "If you are feeling nostalgic you can play the classic WinXP games and more!";
+    const message3Text = language === "es" ? "En el Menu principal 'Erick Pajares' puedes encontrar todo el detalle sobre mi y enlaces a mis redes" : "In the main menu 'Erick Pajares' you can find all the details about me and links to my social media";
+    const message4Text = language === "es" ? " Usa el formulario para enviarme un correo, abre ultima ventana de información sobre mi y el navegador" : "Use the form to send me an email, open the last window of information about me and the browser";
+    const message5Text = language === "es" ? " Puedes empezar a navegar por donde gustes, que tengas un feliz dia!" : "You can start browsing wherever you want, have a nice day!";
 
     const handleNext = () => {
         setMessage1(false);
@@ -37,12 +43,6 @@ const Tutorial = () => {
         setMessage5(false);
         dispatch(setTutorial(!tutorial));
     }
-
-    const message1Text = language === "es" ? "En esta sección puedes encontrar mi CV, las características de mi PC y Mi conexión a internet" : "In this section you can find my Resume, my PC's spec and My internet connection";
-    const message2Text = language === "es" ? "Si estas con algo de nostalgia puedes recordar los clásicos juegos de WinXP y otros mas!" : "If you are feeling nostalgic you can play the classic WinXP games and more!";
-    const message3Text = language === "es" ? "En el Menu principal 'Erick Pajares' puedes encontrar todo el detalle sobre mi y enlaces a mis redes" : "In the main menu 'Erick Pajares' you can find all the details about me and links to my social media";
-    const message4Text = language === "es" ? " Usa el formulario para enviarme un correo, abre ultima ventana de información sobre mi y el navegador" : "Use the form to send me an email, open the last window of information about me and the browser";
-    const message5Text = language === "es" ? " Puedes empezar a navegar por donde gustes, que tengas un feliz dia!" : "You can start browsing wherever you want, have a nice day!";
 
     return (
         <aside className="size-full flex items-center justify-center ">
