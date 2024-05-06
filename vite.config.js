@@ -5,6 +5,11 @@ import tailwindcss from 'tailwindcss';
 
 export default defineConfig({
   plugins: [react(),tailwindcss('./tailwind.config.js')],
+  css: {
+    postcss: {
+      plugins: [require('tailwindcss'), require('autoprefixer')],
+    },
+  },
 });
 
 
