@@ -1,59 +1,188 @@
 {
-  "name": "Erick R. Pajares Balceda",
-  "contact_information": {
-      "address": "Lima, Perú",
-      "phone": "+51 998 994 999",
-      "email": "gunminiho@gmail.com"
-  },
-  "professional_summary": "Soy un desarrollador web motivado y apasionado con sus primeros meses de experiencia en Node, React, Redux, PostgreSQL, Svelte, Tailwind, Ruby (en aprendizaje). Comprometido con el aprendizaje continuo y la resolución de problemas, con habilidades excepcionales en pensamiento crítico y resolución de problemas. Buscando una oportunidad emocionante para contribuir con mi experiencia y crecer profesionalmente en un entorno dinámico.",
-  "work_experience": [
-      {
-          "company": "Diamond Hotel Consulting SAC",
-          "location": "Lima, Perú",
-          "start_date": "Diciembre 2023",
-          "end_date": "Actualidad",
-          "responsibilities": [
-              "Colaboré en el desarrollo de features y mantenimiento de la plataforma de la empresa, trabajando con el equipo Senior para innovar y optimizar funcionalidades.",
-              "Utilicé tecnologías como Svelte, Tailwind y SQL para garantizar la escalabilidad del software y cumplir con las expectativas del cliente mediante una comunicación efectiva y habilidades de resolución de problemas."
-          ]
-      },
-      {
-        "company": "Royal Prestige Perú",
-        "location": "Lima, Perú",
-        "start_date": "Diciembre 2017",
-        "end_date": "Mayo 2023",
-        "responsibilities": [
-            "Realizar la venta directa de los productos de alta gama de cocina de la marca.",
-            "Capacitar de vendedores nuevos en oficinas asi como evaluando su desempeño reportado en campo.",
-            "Entrenar vendedores en campo, acompañándolos a las demostraciones realizadas con los clientes."
+    "name": "Erick R. Pajares Balceda",
+    "contact_information": {
+        "address": "SJL, Lima, Perú",
+        "phone": "+51 998 994 999",
+        "email": "gunminiho@gmail.com"
+    },
+    "professional_summary": "Desarrollador de software con experiencia en sistemas reales de producción y actualmente estudiante de la carrera de Desarrollo de Software en SENATI. Inicié en el mundo de la programación desde los 15 años y desde 2023 llevo mi reconversión profesional de manera formal y aplicada. Combino habilidades autodidactas, formación técnica y experiencia práctica en backend y frontend con tecnologías modernas como Node.js, React, PostgreSQL, Leaflet , Redis y entro otros. He liderado proyectos de alto impacto como sistemas de videovigilancia con IA, control de radios en tiempo real y automatización de gestión municipal. Me especializo en crear soluciones eficientes, automatizadas y enfocadas en resultados.",
+    "work_experience": [
+        {
+            "company": "Coordinador – Central de Comunicaciones y Videovigilancia (CECOM)",
+            "location": "SJL, Lima, Perú - Municipalidad Distrital de San Juan de Lurigancho",
+            "start_date": "Enero 2025",
+            "end_date": "Marzo 2025",
+            "responsibilities": [
+                "1. Mapa de las 610 Cámaras: Implementé un mapa estratégico que integró 610 cámaras con tecnología de inteligencia artificial de Hikvision, logrando un control del 100% y monitoreo en tiempo real de las operaciones en campo. Esta solución redujo los tiempos de respuesta y mejoró la eficiencia operativa en un 30%.",
+                "2. Sistema de Gestión de Bodycams: Desarrollé un sistema innovador para la asignación, gestión y control de bodycams a las unidades en terreno, lo que optimizó la coordinación y supervisión operativa. Con esta solución, se aumentó el seguimiento y control de las unidades desplegadas en un 100%.",
+                "3. Monitoreo Proactivo de Cámaras: Diseñé e implementé un sistema de monitoreo del estado de las cámaras utilizando protocolos ICMP, ISAPI, RTSP y Handshakes, alcanzando un control del 100% sobre la infraestructura de videovigilancia. Esta solución mejoró la eficiencia de la gestión de planta externa en un 50% y garantizó una disponibilidad del 99% en la red.",
+                "4. Observatorio Distrital en Tiempo Real: Lideré la construcción de un observatorio integral que integró datos críticos—incluyendo clima, caudal del río, incidencias de campo, estado de servidores, bodycams y cámaras activas—permitiendo el análisis en tiempo real de KPIs para una toma de decisiones informada. Esta iniciativa incrementó la capacidad de respuesta y la eficiencia de la gestión del turno en un 45%."
+            ]
+        },
+        {
+            "company": "PROYECTO Gestiona-te, MDSJL",
+            "location": "https://gestiona-te.munisjl.gob.pe",
+            "start_date": "Octubre 2024",
+            "end_date": "Diciembre 2024",
+            "responsibilities": [
+                "Sistema para la gestión integral del personal perteneciente a la Subgerencia de Orden Público, incluyendo serenazgo, fiscalización y transportes. Automatiza el control de asistencia con reconocimiento facial, gestiona pagos de locadores y controla justificativos de personal.",
+                "🔧 Tecnologías: Node.js, React, Redux, Express, MUI, Sequelize, PostgreSQL, Axxon PSIM, WebSockets, Multer"
+            ]
+        },
+        {
+            "company": "PROYECTO Mapa Integral de Vigilancia, MDSJL",
+            "location": "https://github.com/gunminiho/mapaintegral_back",
+            "start_date": "Agosto 2024",
+            "end_date": "Octubre 2025",
+            "responsibilities": [
+                "Plataforma de vigilancia en tiempo real para monitoreo de serenos de pie, motorizados y móviles. Permite ver su ubicación, establecer áreas seguras y generar alertas si salen de su zona asignada.",
+                "🔧 Tecnologías: Node.js, React, Redux, Express, MUI, Sequelize, PostgreSQL, Redis, Axxon PSIM, Socket.IO, Turf.js, Multer.js"
+            ]
+        },
+        {
+            "company": "Coordinador de Desarrollo – Subgerencia de Serenazgo",
+            "location": "SJL, Lima, Perú - Municipalidad Distrital de San Juan de Lurigancho",
+            "start_date": "Agosto 2024",
+            "end_date": "Diciembre 2024",
+            "responsibilities": [
+                "1. Mapa Integral de Vigilancia: Lideré el desarrollo de un mapa interactivo para radios TETRA, implementando geolocalización y delimitación de áreas críticas mediante Turf.js. La solución permitió mejorar la cobertura y respuesta de las unidades de serenazgo, reduciendo los tiempos de intervención en un 35%.",
+                "2. Integración con tecnología Dolphin: Realice con ingeniería inversa, la integración de sistemas con tecnología Dolphin para la ubicación en tiempo real de radios, configurando alertas automáticas por salida de zonas designadas. Esta implementación optimizó la seguridad operativa y elevó la vigilancia en campo, incrementando la trazabilidad de las unidades en un 30%.",
+                "3. Sistema de gestión de personal con reconocimiento facial: Diseñé y desarrollé un sistema de control de asistencia basado en reconocimiento facial, empleando la tecnología de Axxon. Además, automatizamos la generación de recibos y fichas RUC para la gestión de pagos, logrando una eficiencia administrativa superior y reduciendo errores en el registro en un 40%.",
+                "4. Digitalización de actas, multas e infracciones: Implementé un sistema digital integral para la elaboración y gestión de actas, multas e infracciones, simplificando los procesos de fiscalización y permitiendo un seguimiento en tiempo real de las incidencias. Este avance digital aumentó la transparencia y redujo el tiempo de gestión en un 35%.",
+                "5. Plataforma de reservas de canchas deportivas: Desarrollé una plataforma en línea para la reserva de canchas deportivas, eliminando la necesidad de trámites presenciales y facilitando la atención ciudadana. La solución mejoró el acceso a los servicios municipales, registrando un aumento del 50% en las reservas y una notable satisfacción del usuario."
+            ]
+        },
+        {
+            "company": "Operador de Cámaras de Vigilancia",
+            "location": "SJL, Lima, Perú - Municipalidad Distrital de San Juan de Lurigancho",
+            "start_date": "Junio 2024",
+            "end_date": "Agosto 2024",
+            "responsibilities": [
+                "1. Monitoreo y coordinación en tiempo real: Realicé la vigilancia integral del distrito utilizando una red de cámaras de alta definición, coordinando en forma efectiva al personal de campo a través de radiocomunicación para responder de manera inmediata ante cualquier incidencia.",
+                "2. Identificación proactiva de incidentes: Implementé un sistema de análisis visual para la detección temprana de incidentes, lo que permitió activar protocolos de respuesta inmediata y reducir el tiempo de intervención en emergencias en un 30%.",
+                "3. Mejora en la comunicación operativa: Contribuí a mejorar la coordinación entre el centro de monitoreo y los equipos en terreno, facilitando un flujo de información constante y preciso, lo que incrementó la eficiencia de la gestión de crisis y fortaleció la seguridad en el distrito."
+            ]
+        },
+        {
+            "company": "Analista programador web full stack",
+            "location": "Lima, Perú",
+            "start_date": "Diciembre 2023",
+            "end_date": "Mayo 2024",
+            "responsibilities": [
+                "1. Desarrollo Full Stack con React y Node.js: Diseñé, programé y mantuve aplicaciones web integrales, asegurando la coherencia entre frontend y backend. Implementé arquitecturas escalables y optimizaciones en rendimiento, reduciendo el tiempo de carga de las páginas en un 40%.",
+                "2. Integración de APIs y Bases de Datos: Creé servicios RESTful y gestioné la comunicación con bases de datos (PostgreSQL/MySQL), garantizando la seguridad y confiabilidad de la información, y facilitando la automatización de procesos críticos.",
+                "3. Colaboración en Equipo y Metodologías Ágiles: Trabajé en conjunto con diseñadores y QA bajo metodologías Scrum, mejorando la coordinación del equipo y acelerando la entrega de funcionalidades claves para los usuarios.",
+                "4. Mantenimiento y Mejora Continua: Realicé diagnósticos periódicos de los sistemas, proponiendo mejoras en la arquitectura y mitigando posibles vulnerabilidades. Esto permitió sostener la calidad y disponibilidad de los servicios en un 99.9%.",
+                "5. Orientación al Negocio: Traduje necesidades de la empresa en soluciones tecnológicas efectivas, contribuyendo al crecimiento y la productividad de la botica Medipharm, parte de Group Cadavra, mediante implementaciones que simplificaron la gestión de inventario y la experiencia del cliente."
+            ]
+        },
+        {
+            "company": "Coordinador de Ventas - Royal Prestige (Emprendimiento Propio)",
+            "location": "Lima, Perú",
+            "start_date": "Enero 2017",
+            "end_date": "Diciembre 2023",
+            "responsibilities": [
+                "1. Liderazgo y Gestión de Equipos: Dirigí y motivé a un equipo de ventas de alto rendimiento, implementando programas de capacitación continua y coaching personalizado para potenciar las habilidades comerciales y alcanzar los objetivos establecidos.",
+                "2. Estrategia Comercial e Innovación: Desarrollé e implementé estrategias de ventas innovadoras que incrementaron los ingresos y la cuota de mercado. Mediante el análisis y seguimiento riguroso de KPIs, optimicé procesos y mejoré la eficiencia de la conversión de leads en clientes.",
+                "3. Atención Personalizada y Fidelización: Implementé modelos de atención al cliente adaptados a las necesidades individuales, logrando aumentar la fidelización y satisfacción del cliente, lo que se tradujo en relaciones comerciales a largo plazo y en el fortalecimiento de la marca.",
+                "4. Impacto en Resultados: A través de la implementación de tácticas comerciales y la coordinación de campañas de ventas, logré impulsar el crecimiento del negocio, consolidando el emprendimiento en un mercado competitivo y obteniendo resultados sostenidos a lo largo de mi gestión."
+            ]
+        }
+    ],
+    "education": [
+        {
+            "degree": "Desarrollo de Software con IA",
+            "school": "Senati",
+            "date": "En curso"
+        },
+        {
+            "degree": "Tecnologías de la Información",
+            "school": "Cibertec",
+            "date": "Junio 2024 - Enero 2025"
+        },
+        {
+            "degree": "Web Development",
+            "school": "Instituto Soy Henry",
+            "date": "Febrero 2024 - Junio 2024"
+        },
+        {
+            "degree": "Bachiller en Ing. Zootecnia",
+            "university": "Universidad José Faustino Sánchez Carrión",
+            "graduation_year": 2015
+        }
+    ],
+    "skills": {
+        "programming_languages": [
+            "JavaScript",
+            "PHP",
+            "C/C++",
+            "Typescript",
+            "Java",
+            "ASM"
+        ],
+        "technologies": [
+            "Node.js",
+            "React.js",
+            "Next.js",
+            "payload CMS",
+            "Redux Toolkit",
+            "Express",
+            "Sequelize",
+            "PostgreSQL",
+            "Ruby on Rails",
+            "Tailwind CSS",
+            "Bootstrap",
+            "APIs RESTful",
+            "WebSockets",
+            "Redis",
+            "node-Cache",
+            "JWT",
+            "MUI",
+            "Leaflet",
+            "HTML 5",
+            "CSS",
+            "SQL Server",
+            "MongoDB",
+            "Turf.js",
+            "Google Maps API",
+            "Git",
+            "GitHub",
+            "PM2",
+            "Docker",
+            "Nginx",
+            "Axxon PSIM",
+            "Socket.IO",
+            "Hikvision",
+            "Hytera",
+            "RTSP",
+            "ISAPI",
+            "Playwright",
+            "Puppeteer",
+            "Selenium"
+        ],
+        "others": [
+            "Pensamiento crítico",
+            "Resiliencia",
+            "Liderazgo",
+            "Trabajo colaborativo",
+            "Adaptabilidad y enfoque en resultados",
+            "Deseo de aprender",
+            "Debugging",
+            "Ventas & manejo de equipos",
+            "SCRUM",
+            "Windows Server",
+            "Mac",
+            "Linux"
         ]
-    }
-  ],
-  "education": [
-      {
-          "degree": "Bootcamp -'Desarrollo Full Stack Javascript'",
-          "school": "Soy Henry",
-          "date": "Junio - noviembre 2023"
-      },
-      {
-          "degree": "Bachiller en Ing. Zootecnia",
-          "university": "Universidad José Faustino Sánchez Carrión",
-          "graduation_year": 2015
-      }
-  ],
-  "skills": {
-      "programming_languages": ["JavaScript", "Ruby", "C/C++"],
-      "technologies": ["Node.js", "React.js", "Redux", "Express", "Sequelize", "PostgreSQL", "Ruby on Rails", "Tailwind", "Bootstrap"],
-      "others": ["Pensamiento crítico", "resiliencia", "deseo de aprender", "debugging", "ventas & manejo de equipos", "SCRUM", "Windows", "Mac", "Linux básico"]
-  },
-  "demos": {
-      "portfolio": "https://erickpajares.dev/",
-      "github": "https://github.com/gunminiho",
-      "linkedin": "https://www.linkedin.com/in/gunminiho/"
-  },
-  "languages": {
-      "spanish": "nativo",
-      "english": "B-2 / C-1"
-  },
-  "references": "Disponibles a solicitud."
+    },
+    "demos": {
+        "portfolio": "https://erickpajares.dev/",
+        "github": "https://github.com/gunminiho",
+        "linkedin": "https://www.linkedin.com/in/gunminiho/"
+    },
+    "languages": {
+        "spanish": "nativo",
+        "english": "B-2 / C-1"
+    },
+    "references": "Disponibles a solicitud."
 }

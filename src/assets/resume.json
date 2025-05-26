@@ -1,48 +1,188 @@
 {
-    "name": "Erick R. Pajares Balceda",
-    "contact_information": {
-        "address": "Lima, Peru",
-        "phone": "+51 998 994 999",
-        "email": "gunminiho@gmail.com"
+  "name": "Erick R. Pajares Balceda",
+  "contact_information": {
+    "address": "SJL, Lima, Peru",
+    "phone": "+51 998 994 999",
+    "email": "gunminiho@gmail.com"
+  },
+  "professional_summary": "Software developer with experience in production-grade systems and currently studying Software Development at SENATI. I started programming at age 15 and since 2023 have been formally and actively pursuing my professional reconversion. I combine self-taught skills, technical training, and hands-on experience in both backend and frontend using modern technologies like Node.js, React, PostgreSQL, Leaflet, Redis, and others. I have led high-impact projects such as AI-powered video surveillance systems, real-time radio control, and municipal management automation. I specialize in creating efficient, automated, and results-driven solutions.",
+  "work_experience": [
+    {
+      "company": "Coordinator – Communications and Video Surveillance Center (CECOM)",
+      "location": "SJL, Lima, Peru – District Municipality of San Juan de Lurigancho",
+      "start_date": "January 2025",
+      "end_date": "March 2025",
+      "responsibilities": [
+        "1. Camera Map: Implemented a strategic map integrating 610 AI-enabled Hikvision cameras, achieving 100% coverage and real-time field operations monitoring. This solution reduced response times and improved operational efficiency by 30%.",
+        "2. Bodycam Management System: Developed an innovative system for assignment, management, and control of bodycams for field units, optimizing operational coordination and supervision. This solution doubled the tracking and control of deployed units.",
+        "3. Proactive Camera Monitoring: Designed and implemented a monitoring system using ICMP, ISAPI, RTSP, and handshake protocols, achieving 100% infrastructure oversight. This improved external plant management efficiency by 50% and ensured 99% network availability.",
+        "4. Real-Time District Observatory: Led the creation of an integrated observatory combining critical data—including weather, river flow, field incidents, server status, bodycams, and active cameras—enabling real-time KPI analysis for informed decision-making. This initiative increased response capacity and shift management efficiency by 45%."
+      ]
     },
-    "professional_summary": "I am a motivated and passionate web developer with my first few months of experience in Node, React, Redux, PostgreSQL, Svelte, Tailwind, and Ruby (learning). Committed to continuous learning and problem-solving, with exceptional skills in critical thinking and problem-solving. Seeking an exciting opportunity to contribute my experience and grow professionally in a dynamic environment.",
-    "work_experience": [
-        {
-            "company": "Diamond Hotel Consulting SAC",
-            "location": "Lima, Peru",
-            "start_date": "December 2023",
-            "end_date": "Present",
-            "responsibilities": [
-                "Collaborated in the development of features and maintenance of the company's platform, working with the Senior team to innovate and optimize functionalities.",
-                "Used technologies like Svelte, Tailwind, and SQL to ensure software scalability and meet client expectations through effective communication and problem-solving skills."
-            ]
-        }
+    {
+      "company": "Gestiona-te Project, MDSJL",
+      "location": "https://gestiona-te.munisjl.gob.pe",
+      "start_date": "October 2024",
+      "end_date": "December 2024",
+      "responsibilities": [
+        "Developed a comprehensive personnel management system for the Public Order Sub-directorate, including security, inspection, and transport units. Automated attendance control with facial recognition, managed contractor payments, and handled personnel justifications.",
+        "🔧 Technologies: Node.js, React, Redux, Express, MUI, Sequelize, PostgreSQL, Axxon PSIM, WebSockets, Multer"
+      ]
+    },
+    {
+      "company": "Integral Surveillance Map Project, MDSJL",
+      "location": "https://github.com/gunminiho/mapaintegral_back",
+      "start_date": "August 2024",
+      "end_date": "October 2025",
+      "responsibilities": [
+        "Built a real-time surveillance platform for foot patrols, motorized units, and vehicles. Enabled live location tracking, safe-zone configuration, and automatic alerts when units exited their assigned areas.",
+        "🔧 Technologies: Node.js, React, Redux, Express, MUI, Sequelize, PostgreSQL, Redis, Axxon PSIM, Socket.IO, Turf.js, Multer.js"
+      ]
+    },
+    {
+      "company": "Development Coordinator – Serenazgo Sub-directorate",
+      "location": "SJL, Lima, Peru – District Municipality of San Juan de Lurigancho",
+      "start_date": "August 2024",
+      "end_date": "December 2024",
+      "responsibilities": [
+        "1. Interactive Radio Map: Led development of an interactive TETRA radio map using Turf.js for geofencing critical areas, improving coverage and reducing intervention times by 35%.",
+        "2. Dolphin Integration: Reverse-engineered and integrated Dolphin technology for real-time radio location, configuring automatic zone-exit alerts. This enhanced field security and increased unit traceability by 30%.",
+        "3. Facial Recognition Attendance System: Designed and developed a facial recognition attendance control system using Axxon technology. Automated receipt and RUC record generation for payment management, reducing registration errors by 40%.",
+        "4. Digitalization of Records: Implemented a digital system for managing reports, fines, and infractions, streamlining inspection processes and enabling real-time incident tracking. This increased transparency and cut management time by 35%.",
+        "5. Sports Facility Reservation Platform: Developed an online platform for sports court bookings, eliminating in-person procedures and improving citizen access. This resulted in a 50% increase in reservations and higher user satisfaction."
+      ]
+    },
+    {
+      "company": "Video Surveillance Operator",
+      "location": "SJL, Lima, Peru – District Municipality of San Juan de Lurigancho",
+      "start_date": "June 2024",
+      "end_date": "August 2024",
+      "responsibilities": [
+        "1. Real-Time Monitoring and Coordination: Conducted comprehensive district surveillance using an HD camera network and coordinated field personnel via radio communication for immediate incident response.",
+        "2. Proactive Incident Detection: Implemented a visual analysis system for early incident detection, activating response protocols and reducing intervention times by 30%.",
+        "3. Operational Communication Improvement: Enhanced communication between the control center and field teams, ensuring continuous, accurate information flow and strengthening crisis management."
+      ]
+    },
+    {
+      "company": "Full-Stack Web Programmer Analyst",
+      "location": "Lima, Peru",
+      "start_date": "December 2023",
+      "end_date": "May 2024",
+      "responsibilities": [
+        "1. Full-Stack Development with React and Node.js: Designed, coded, and maintained end-to-end web applications, ensuring frontend-backend coherence. Implemented scalable architectures and performance optimizations, reducing page load times by 40%.",
+        "2. API and Database Integration: Built RESTful services and managed communication with PostgreSQL/MySQL databases, ensuring data security and reliability while automating critical processes.",
+        "3. Agile Collaboration: Worked closely with designers and QA under Scrum methodologies, improving team coordination and accelerating delivery of key features.",
+        "4. Maintenance and Continuous Improvement: Performed regular system diagnostics, proposed architectural enhancements, and mitigated vulnerabilities. Maintained 99.9% service availability.",
+        "5. Business-Driven Solutions: Translated business requirements into effective technical solutions, contributing to growth and productivity of Medipharm pharmacy within Group Cadavra by simplifying inventory management and customer experience."
+      ]
+    },
+    {
+      "company": "Sales Coordinator – Royal Prestige (Own Business)",
+      "location": "Lima, Peru",
+      "start_date": "January 2017",
+      "end_date": "December 2023",
+      "responsibilities": [
+        "1. Team Leadership and Management: Led and motivated a high-performance sales team, implementing ongoing training and personalized coaching to enhance commercial skills and achieve targets.",
+        "2. Commercial Strategy and Innovation: Developed and executed innovative sales strategies that increased revenue and market share. Used KPI analysis to optimize processes and improve lead-to-customer conversion rates.",
+        "3. Personalized Customer Service and Retention: Implemented customer-centric service models, increasing loyalty and satisfaction, resulting in long-term business relationships and strengthened brand reputation.",
+        "4. Measurable Impact: Through targeted campaigns and coordinated sales efforts, drove sustained business growth in a competitive market."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Software Development with AI",
+      "school": "Senati",
+      "date": "Ongoing"
+    },
+    {
+      "degree": "Information Technologies",
+      "school": "Cibertec",
+      "date": "June 2024 - January 2025"
+    },
+    {
+      "degree": "Web Development",
+      "school": "Instituto Soy Henry",
+      "date": "February 2024 - June 2024"
+    },
+    {
+      "degree": "Bachelor in Animal Science Engineering",
+      "university": "José Faustino Sánchez Carrión National University",
+      "graduation_year": 2015
+    }
+  ],
+  "skills": {
+    "programming_languages": [
+      "JavaScript",
+      "PHP",
+      "C/C++",
+      "TypeScript",
+      "Java",
+      "Assembly"
     ],
-    "education": [
-        {
-            "degree": "Bootcamp: 'Full Stack Javascript Development'",
-            "school": "Soy Henry",
-            "date": "June - November 2023"
-        },
-        {
-            "degree": "Bachelor's in Animal Science Engineering",
-            "university": "Universidad José Faustino Sánchez Carrión",
-            "graduation_year": 2015
-        }
+    "technologies": [
+      "Node.js",
+      "React.js",
+      "Next.js",
+      "Payload CMS",
+      "Redux Toolkit",
+      "Express",
+      "Sequelize",
+      "PostgreSQL",
+      "Ruby on Rails",
+      "Tailwind CSS",
+      "Bootstrap",
+      "REST APIs",
+      "WebSockets",
+      "Redis",
+      "node-Cache",
+      "JWT",
+      "MUI",
+      "Leaflet",
+      "HTML5",
+      "CSS",
+      "SQL Server",
+      "MongoDB",
+      "Turf.js",
+      "Google Maps API",
+      "Git",
+      "GitHub",
+      "PM2",
+      "Docker",
+      "Nginx",
+      "Axxon PSIM",
+      "Socket.IO",
+      "Hikvision",
+      "Hytera",
+      "RTSP",
+      "ISAPI",
+      "Playwright",
+      "Puppeteer",
+      "Selenium"
     ],
-    "skills": {
-        "programming_languages": ["JavaScript", "Ruby", "C/C++"],
-        "technologies": ["Node.js", "React.js", "Redux", "Express", "Sequelize", "PostgreSQL", "Ruby on Rails", "Tailwind", "Bootstrap"],
-        "others": ["Critical thinking", "resilience", "desire to learn", "debugging", "sales & team management", "SCRUM", "Windows", "Mac", "Basic Linux"]
-    },
-    "demos": {
-        "portfolio": "https://portfolio-erick-pajares-projects.vercel.app/",
-        "github": "https://github.com/gunminiho",
-        "linkedin": "https://www.linkedin.com/in/gunminiho/"
-    },
-    "languages": {
-        "spanish": "native",
-        "english": "B-2 / C-1"
-    },
-    "references": "Available upon request."
+    "others": [
+      "Critical thinking",
+      "Resilience",
+      "Leadership",
+      "Collaborative teamwork",
+      "Adaptability and results-oriented",
+      "Eagerness to learn",
+      "Debugging",
+      "Sales & team management",
+      "SCRUM",
+      "Windows Server",
+      "MacOS",
+      "Linux"
+    ]
+  },
+  "demos": {
+    "portfolio": "https://erickpajares.dev/",
+    "github": "https://github.com/gunminiho",
+    "linkedin": "https://www.linkedin.com/in/gunminiho/"
+  },
+  "languages": {
+    "spanish": "native",
+    "english": "B2 / C1"
+  },
+  "references": "Available upon request."
 }

@@ -1,29 +1,136 @@
-[   
+[
+    {
+        "title": "Gestiona-te (2024)",
+        "description": "Sistema para la gestión integral del personal de MDSJL",
+        "full": [
+            "Sistema para la gestión integral del personal perteneciente a la Subgerencia de Orden Público, incluyendo serenazgo, fiscalización y transportes. Automatiza el control de asistencia con reconocimiento facial, gestiona pagos de locadores y controla justificativos de personal.",
+            "Diseñé y desarrollé un sistema de control de asistencia basado en reconocimiento facial, empleando la tecnología de Axxon. ",
+            "Además, automatizamos la generación de recibos y fichas RUC para la gestión de pagos, logrando una eficiencia administrativa superior y reduciendo errores en el registro en un 40%."
+        ],
+        "type": "business",
+        "deploy": "https://gestiona-te.munisjl.gob.pe"
+    },
+    {
+        "title": "Mapa Integral de Vigilancia (2024)",
+        "description": "mapa interactivo para radios TETRA",
+        "full": [
+            "Lideré el desarrollo de un mapa interactivo para radios TETRA, implementando geolocalización y delimitación de áreas críticas mediante Turf.js.",
+            "La solución permitió mejorar la cobertura y respuesta de las unidades de serenazgo, reduciendo los tiempos de intervención en un 35%."
+        ],
+        "type": "business",
+        "deploy": "https://github.com/gunminiho/mapaintegral_back"
+    },
+    {
+        "title": "Mapa de las 610 Cámaras",
+        "description": "mapa estratégico que integró 610 cámaras con tecnología de inteligencia artificial de Hikvision",
+        "full": [
+            "Implementé un mapa estratégico que integró 610 cámaras con tecnología de inteligencia artificial de Hikvision, logrando un control del 100% y monitoreo en tiempo real de las operaciones en campo.",
+            "Esta solución redujo los tiempos de respuesta y mejoró la eficiencia operativa en un 30%."
+        ],
+        "type": "business",
+        "deploy": "https://github.com/gunminiho/mapa610.git"
+    },
+    {
+        "title": "Sistema de Gestión de Bodycams",
+        "description": "Sistema innovador para la asignación, gestión y control de bodycams.",
+        "full": [
+            "Desarrollé un sistema innovador para la asignación, gestión y control de bodycams a las unidades en terreno, lo que optimizó la coordinación y supervisión operativa. Con esta solución, se aumentó el seguimiento y control de las unidades desplegadas en un 100%."
+        ],
+        "type": "business",
+        "deploy": "deploy local"
+    },
+    {
+        "title": "Estado de las 610 cámaras",
+        "description": "sistema de monitoreo del estado de las cámaras",
+        "full": [
+            "Diseñé e implementé un sistema de monitoreo del estado de las cámaras utilizando protocolos ICMP, ISAPI, RTSP y Handshakes, alcanzando un control del 100% sobre la infraestructura de videovigilancia.",
+            "Esta solución mejoró la eficiencia de la gestión de planta externa en un 50% y garantizó una disponibilidad del 99% en la red."
+        ],
+        "type": "business",
+        "deploy": "https://github.com/gunminiho/frontend-camaras.git"
+    },
+    {
+        "title": "Observatorio Distrital en Tiempo Real",
+        "description": "Observatorio Distrital en Tiempo Real",
+        "full": [
+            "Lideré la construcción de un observatorio integral que integró datos críticos—incluyendo clima, caudal del río, incidencias de campo, estado de servidores, bodycams y cámaras activas—permitiendo el análisis en tiempo real de KPIs para una toma de decisiones informada.",
+            "Esta iniciativa incrementó la capacidad de respuesta y la eficiencia de la gestión del turno en un 45%."
+        ],
+        "type": "business",
+        "deploy": "deploy local"
+    },
+    {
+        "title": "RH Bot",
+        "description": "Bot para automatizacion de recibos por honorarios",
+        "full": [
+            "Este bot fue creado para automatizar la generación de recibos por honorarios, permitiendo a los trabajadores generar sus recibos de manera rápida y eficiente.",
+            "El bot hace todo el proceso de generación de recibos, desde la validación de datos hasta la generación del archivo PDF.",
+            "Simula todo el proceso manual que haria un trabajador de la entidad, pero de manera automatizada.",
+            "Se uso playwright para la automatización de la generación de recibos."
+        ],
+        "type": "business",
+        "deploy": "https://github.com/gunminiho/botRH"
+    },
     {
         "title": "The Earthquake Report",
         "description": "Sitio web que recopila los últimos sismos reportados por la USGS",
-        "full": ["Backend hecho con Ruby on Rails, donde con una tarea recopila la información de los últimos 30 días y la almacena en una base de datos en PostgreSQL. Hay 3 endpoints más:","GET: /getEarthquakes obtiene los sismos dependiendo de los parámetros dados, como el número de página y la cantidad de sismos por página.","POST: /postComment guarda en la base de datos el comentario hecho por el usuario.","GET: /getComment/ obtiene los comentarios de la base de datos dependiendo del id del sismo.","Frontend hecho con React y Bootstrap, donde se muestra la información de los sismos y se pueden hacer comentarios en cada uno de ellos.","Está hecho de manera responsive y se puede ver en cualquier dispositivo de pantalla grande hasta 768px en formato de tarjeta y en versiones móviles en formato de deslizamiento, como Tinder.","El sitio web está desplegado en Vercel para el frontend y en Render para el backend. Al acceder al live, tengan en cuenta que Render apaga el funcionamiento de los servidores si no recibe peticiones cada cierto tiempo, pero los vuelve a conectar al recibir una, así que posiblemente demore un poco al ingresar cuando quieran verlo.","Repositorio de Back y Front disponible en Github."],
+        "full": [
+            "Backend hecho con Ruby on Rails, donde con una tarea recopila la información de los últimos 30 días y la almacena en una base de datos en PostgreSQL. Hay 3 endpoints más:",
+            "GET: /getEarthquakes obtiene los sismos dependiendo de los parámetros dados, como el número de página y la cantidad de sismos por página.",
+            "POST: /postComment guarda en la base de datos el comentario hecho por el usuario.",
+            "GET: /getComment/ obtiene los comentarios de la base de datos dependiendo del id del sismo.",
+            "Frontend hecho con React y Bootstrap, donde se muestra la información de los sismos y se pueden hacer comentarios en cada uno de ellos.",
+            "Está hecho de manera responsive y se puede ver en cualquier dispositivo de pantalla grande hasta 768px en formato de tarjeta y en versiones móviles en formato de deslizamiento, como Tinder.",
+            "El sitio web está desplegado en Vercel para el frontend y en Render para el backend. Al acceder al live, tengan en cuenta que Render apaga el funcionamiento de los servidores si no recibe peticiones cada cierto tiempo, pero los vuelve a conectar al recibir una, así que posiblemente demore un poco al ingresar cuando quieran verlo.",
+            "Repositorio de Back y Front disponible en Github."
+        ],
         "type": "challenge",
         "deploy": "https://quakeschallenge.vercel.app/"
     },
     {
         "title": "Salesland Disociar",
         "description": "Backend hecho para una prueba técnica para la empresa Salesland Perú.",
-        "full": ["El backend recibe mediante una solicitud POST para recibir un lead, el cual entra en una tabla completamente para llenar el registro.","Cuando el registro anterior se guarda satisfactoriamente, un nuevo método se encarga de disociar el lead y llevarlo a otra tabla donde, a pedido del Challenger, debe cumplir ciertos parámetros.","Cuando el registro se mueve a esta nueva tabla, se procede a eliminarlo de la tabla principal y solo permanece en la tabla disociada.","Se utilizó Node.js junto con Express y Sequelize para la conexión a la base de datos de PostgreSQL.","El endpoint verifica que el objeto que se envía cumpla con los parámetros necesarios para ser guardado en la tabla principal. Si no es así, responde con un mensaje de error indicando todos los errores encontrados.","Si encuentra un lead duplicado, lo insertará igual pero devolverá un mensaje indicando que el lead está duplicado e indicando el número de lead que está duplicado.","Repositorio disponible en Github."],     
+        "full": [
+            "El backend recibe mediante una solicitud POST para recibir un lead, el cual entra en una tabla completamente para llenar el registro.",
+            "Cuando el registro anterior se guarda satisfactoriamente, un nuevo método se encarga de disociar el lead y llevarlo a otra tabla donde, a pedido del Challenger, debe cumplir ciertos parámetros.",
+            "Cuando el registro se mueve a esta nueva tabla, se procede a eliminarlo de la tabla principal y solo permanece en la tabla disociada.",
+            "Se utilizó Node.js junto con Express y Sequelize para la conexión a la base de datos de PostgreSQL.",
+            "El endpoint verifica que el objeto que se envía cumpla con los parámetros necesarios para ser guardado en la tabla principal. Si no es así, responde con un mensaje de error indicando todos los errores encontrados.",
+            "Si encuentra un lead duplicado, lo insertará igual pero devolverá un mensaje indicando que el lead está duplicado e indicando el número de lead que está duplicado.",
+            "Repositorio disponible en Github."
+        ],
         "type": "challenge",
         "deploy": "https://github.com/gunminiho/salesland"
     },
     {
         "title": "Flexworks",
         "description": "Proyecto final: tablero de trabajo para trabajos remotos en Latam que está en vivo ahora.",
-        "full": ["Sitio web que ofrece un amplio número de trabajos disponibles para una gama de profesiones diversas, donde cada uno postula al que le conviene y la empresa responsable es encargada de buscar el mejor perfil.","Está diseñada para ofrecer trabajos temporales de corta a mediana duración.","El backend está desarrollado con Node.js, Sequelize, Express y PostgreSQL.","Para la autenticación se utilizó OAuth y JWT.","El Frontend está hecho con React, TailwindCSS, MaterialUI y Redux Toolkit.","La repo se puede encontrar en mi Github, la cual pertenece al MVP desarrollado por nuestro grupo de SoyHenry.","En este enlace pueden encontrar la mención que hacen a nuestro trabajo: https://www.linkedin.com/posts/flexwork-latam_henryprojects-henryprojects2023-activity-7142707532522803200-N4uZ"],
+        "full": [
+            "Sitio web que ofrece un amplio número de trabajos disponibles para una gama de profesiones diversas, donde cada uno postula al que le conviene y la empresa responsable es encargada de buscar el mejor perfil.",
+            "Está diseñada para ofrecer trabajos temporales de corta a mediana duración.",
+            "El backend está desarrollado con Node.js, Sequelize, Express y PostgreSQL.",
+            "Para la autenticación se utilizó OAuth y JWT.",
+            "El Frontend está hecho con React, TailwindCSS, MaterialUI y Redux Toolkit.",
+            "La repo se puede encontrar en mi Github, la cual pertenece al MVP desarrollado por nuestro grupo de SoyHenry.",
+            "En este enlace pueden encontrar la mención que hacen a nuestro trabajo: https://www.linkedin.com/posts/flexwork-latam_henryprojects-henryprojects2023-activity-7142707532522803200-N4uZ"
+        ],
         "type": "business",
         "deploy": "https://www.flexworklatam.com/"
     },
     {
         "title": "The Doggy Explorer",
         "description": "Primer proyecto para mi clase de desarrollo web.",
-        "full": ["Sitio creado como proyecto individual para mi clase de desarrollo web.","El sitio web se encarga de recopilar todas las razas de perros que vienen de una API (https://api.thedogapi.com/v1/breeds).","Se puede filtrar la información por raza, por origen y ordenar por orden alfabético, por peso de la raza. Se trabajó en formato de tarjetas.","Se puede ver el detalle de cada raza al ingresar a la tarjeta específica.","Se puede ingresar a la base de datos tu propio perro personalizado para luego ser consultado.","Para el backend se usó Node.js, Express, Sequelize y PostgreSQL.","Para el Frontend se utilizó React y module.css.","Para almacenar las imágenes se utilizó Cloudinary.","Repositorio disponible en Github."],
+        "full": [
+            "Sitio creado como proyecto individual para mi clase de desarrollo web.",
+            "El sitio web se encarga de recopilar todas las razas de perros que vienen de una API (https://api.thedogapi.com/v1/breeds).",
+            "Se puede filtrar la información por raza, por origen y ordenar por orden alfabético, por peso de la raza. Se trabajó en formato de tarjetas.",
+            "Se puede ver el detalle de cada raza al ingresar a la tarjeta específica.",
+            "Se puede ingresar a la base de datos tu propio perro personalizado para luego ser consultado.",
+            "Para el backend se usó Node.js, Express, Sequelize y PostgreSQL.",
+            "Para el Frontend se utilizó React y module.css.",
+            "Para almacenar las imágenes se utilizó Cloudinary.",
+            "Repositorio disponible en Github."
+        ],
         "type": "self",
         "deploy": "https://github.com/gunminiho/Dogs-PI"
     }
