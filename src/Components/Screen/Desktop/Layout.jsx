@@ -23,11 +23,27 @@ const ScreenLayout = ({ width, height }) => {
   const { language, startUp, allProjects, showText, showWindow, showIE, showFolder, showResources, showInfo, tutorial } = useSelector((state) => state.windows);
   const [resume, setResume] = useState();
 
+  // useEffect(() => {
+  //   if (language !== "none")
+  //     setResume(language === "es" ? CV : Resume);
+  // }
+  //   , [language]);
+
   useEffect(() => {
-    if (language !== "none")
-      setResume(language === "es" ? CV : Resume);
-  }
-    , [language]);
+    // Cuando cambia el idioma, cargamos el JSON correspondiente desde /public
+    if (language === "es" || language === "en") {
+      const filePath = language === "es" ? "/cv.json" : "/resume.json";
+      fetch(filePath)
+        .then((res) => {
+          if (!res.ok) throw new Error("Error al cargar JSON");
+          return res.json();
+        })
+        .then((data) => setResume(data))
+        .catch((err) => {
+          console.error("Error cargando el JSON de resume:", err);
+        });
+    }
+  }, [language]);
 
   return (
     <div>
@@ -35,7 +51,6 @@ const ScreenLayout = ({ width, height }) => {
       <main className={`absolute top-0 left-0 bottom-0 right-0 z-0 bg-cover bg-no-repeat bg-center overflow-hidden`} style={{ backgroundImage: `url(${Background})` }} >
         {language !== "none" && <DesktopIcons height={height} />}
         {!startUp && language === "none" ? <StartUp /> : <Menu setCurrentView={setCurrentView} resume={resume} name={resume?.name} />}
-        { console.log("resumen", resume) }
         { showText && <Word currentView={currentView} />}
         {showWindow && <Window />}
         {showIE && <InternetExplorer />}

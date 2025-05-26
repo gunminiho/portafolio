@@ -1,0 +1,135 @@
+[
+    {
+        "title": "Gestiona-te (2024)",
+        "description": "Comprehensive personnel management system for MDSJL",
+        "full": [
+            "System for the comprehensive management of personnel belonging to the Public Order Sub-directorate, including security, inspections, and transport units. Automates attendance control with facial recognition, manages contractor payments, and handles personnel justifications.",
+            "I designed and developed an attendance control system based on facial recognition using Axxon technology.",
+            "We also automated the generation of payment receipts and RUC records for payment management, achieving superior administrative efficiency and reducing registration errors by 40%."
+        ],
+        "type": "business",
+        "deploy": "https://gestiona-te.munisjl.gob.pe"
+    },
+    {
+        "title": "Mapa Integral de Vigilancia (2024)",
+        "description": "Interactive map for TETRA radios",
+        "full": [
+            "Led the development of an interactive map for TETRA radios, implementing geolocation and defining critical areas using Turf.js.",
+            "This solution improved coverage and response times for security units, reducing intervention times by 35%."
+        ],
+        "type": "business",
+        "deploy": "https://github.com/gunminiho/mapaintegral_back"
+    },
+    {
+        "title": "Mapa de las 610 Cámaras (2024)",
+        "description": "Strategic map integrating 610 AI-enabled Hikvision cameras",
+        "full": [
+            "Implemented a strategic map integrating 610 Hikvision AI cameras, achieving 100% control and real-time monitoring of field operations.",
+            "This solution reduced response times and improved operational efficiency by 30%."
+        ],
+        "type": "business",
+        "deploy": "https://github.com/gunminiho/mapa610.git"
+    },
+    {
+        "title": "Bodycam Management System (2024)",
+        "description": "Innovative system for assignment, management, and control of bodycams",
+        "full": [
+            "Developed an innovative system for assigning, managing, and controlling bodycams for field units, optimizing operational coordination and supervision. With this solution, unit tracking and control increased by 100%."
+        ],
+        "type": "business",
+        "deploy": "deploy local"
+    },
+    {
+        "title": "Camera Status Monitoring (2024)",
+        "description": "System for monitoring the status of surveillance cameras",
+        "full": [
+            "Designed and implemented a camera status monitoring system using ICMP, ISAPI, RTSP, and handshake protocols, achieving 100% infrastructure oversight.",
+            "This solution improved external plant management efficiency by 50% and ensured 99% network availability."
+        ],
+        "type": "business",
+        "deploy": "https://github.com/gunminiho/frontend-camaras.git"
+    },
+    {
+        "title": "Real-Time District Observatory (2024)",
+        "description": "Integrated real-time district observatory",
+        "full": [
+            "Led the construction of an integrated observatory that combined critical data—including weather, river flow, field incidents, server status, bodycams, and active cameras—enabling real-time KPI analysis for informed decision-making.",
+            "This initiative increased response capacity and shift management efficiency by 45%."
+        ],
+        "type": "business",
+        "deploy": "deploy local"
+    },
+    {
+        "title": "RH Bot (2024)",
+        "description": "Bot for automating professional fee receipts",
+        "full": [
+            "Created this bot to automate the generation of professional fee receipts, allowing workers to produce their receipts quickly and efficiently.",
+            "The bot handles the entire receipt generation process, from data validation to PDF file creation.",
+            "It simulates the manual process that a worker would perform, but in an automated fashion.",
+            "Used Playwright for automating the receipt generation."
+        ],
+        "type": "business",
+        "deploy": "https://github.com/gunminiho/botRH"
+    },
+    {
+        "title": "The Earthquake Report (Challenge)",
+        "description": "Website that collects the latest earthquakes reported by the USGS",
+        "full": [
+            "Backend built with Ruby on Rails, where a scheduled task collects data from the last 30 days and stores it in a PostgreSQL database. There are three additional endpoints:",
+            "GET /getEarthquakes retrieves earthquakes based on given parameters like page number and results per page.",
+            "POST /postComment saves user comments in the database.",
+            "GET /getComment/ retrieves comments by earthquake ID.",
+            "Frontend built with React and Bootstrap, displaying earthquake data and allowing user comments on each entry.",
+            "Responsive design: on large screens up to 768px displays as cards; on mobile, swipe format similar to Tinder.",
+            "Frontend is deployed on Vercel and backend on Render; note that Render may spin servers down when idle, causing slight delays on first access.",
+            "Back and Front repositories are available on GitHub."
+        ],
+        "type": "challenge",
+        "deploy": "https://quakeschallenge.vercel.app/"
+    },
+    {
+        "title": "Salesland Lead Dissociation (Challenge)",
+        "description": "Backend for a technical test for Salesland Peru",
+        "full": [
+            "The backend receives a lead via POST request and stores it in the main table.",
+            "After successful storage, a separate method dissociates the lead into another table according to challenge parameters.",
+            "Once moved, the lead is removed from the main table and remains only in the dissociated table.",
+            "Used Node.js with Express and Sequelize for PostgreSQL database interactions.",
+            "The endpoint validates the incoming object and returns detailed error messages if validation fails.",
+            "If a duplicate lead is found, it is still inserted but returns a message indicating duplication and the existing lead ID.",
+            "Repository available on GitHub."
+        ],
+        "type": "challenge",
+        "deploy": "https://github.com/gunminiho/salesland"
+    },
+    {
+        "title": "Flexworks (2023)",
+        "description": "Remote work dashboard for Latin America",
+        "full": [
+            "Website offering a wide range of temporary to mid-term remote jobs across diverse professions, allowing applicants to apply and companies to find the best profiles.",
+            "Designed to provide short- to medium-term job postings.",
+            "Backend developed with Node.js, Sequelize, Express, and PostgreSQL.",
+            "Authentication implemented with OAuth and JWT.",
+            "Frontend built with React, TailwindCSS, Material-UI, and Redux Toolkit.",
+            "Repository available on GitHub; our MVP was recognized here: https://www.linkedin.com/posts/flexwork-latam_henryprojects-henryprojects2023-activity-7142707532522803200-N4uZ",
+            "Live site: https://www.flexworklatam.com/"
+        ],
+        "type": "business",
+        "deploy": "https://www.flexworklatam.com/"
+    },
+    {
+        "title": "The Doggy Explorer (2023)",
+        "description": "Web project for showing dog breeds",
+        "full": [
+            "Individual class project to list all dog breeds fetched from an API (https://api.thedogapi.com/v1/breeds).",
+            "Features include filtering by breed and origin, sorting alphabetically or by weight, and viewing breed details in card format.",
+            "Users can add custom dogs to the database for later queries.",
+            "Backend built with Node.js, Express, Sequelize, and PostgreSQL.",
+            "Frontend developed with React and CSS modules.",
+            "Images stored using Cloudinary.",
+            "Repository available on GitHub."
+        ],
+        "type": "self",
+        "deploy": "https://github.com/gunminiho/Dogs-PI"
+    }
+]
