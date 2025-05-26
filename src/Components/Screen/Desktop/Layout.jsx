@@ -35,6 +35,7 @@ const ScreenLayout = ({ width, height }) => {
       <main className={`absolute top-0 left-0 bottom-0 right-0 z-0 bg-cover bg-no-repeat bg-center overflow-hidden`} style={{ backgroundImage: `url(${Background})` }} >
         {language !== "none" && <DesktopIcons height={height} />}
         {!startUp && language === "none" ? <StartUp /> : <Menu setCurrentView={setCurrentView} resume={resume} name={resume?.name} />}
+        { console.log("resumen", resume) }
         { showText && <Word currentView={currentView} />}
         {showWindow && <Window />}
         {showIE && <InternetExplorer />}
